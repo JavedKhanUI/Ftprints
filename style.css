@@ -30,7 +30,7 @@ a{text-decoration: none !important}
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: 32rem;
+  height: 40rem;
 }
 .carousel-item > img {
   position: absolute;
@@ -82,11 +82,13 @@ p.course-review-top a {
 .course-summary p.card-text {
     color: #444;
 }
+/*
 .accordion > .card > .card-header {
     background: transparent;
     padding: .5em 0em;
     border-bottom: 2px solid rgba(0, 0, 0, 0.125);
 }
+*/
 .how-it-list li span {
     position: absolute;
     left: 0;
@@ -162,6 +164,8 @@ p.course-review-top a {
 footer {
     background: #444444;
 }
+
+
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
