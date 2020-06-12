@@ -82,13 +82,20 @@ p.course-review-top a {
 .course-summary p.card-text {
     color: #444;
 }
-/*
-.accordion > .card > .card-header {
+.course-discription .accordion > .card > .card-header {
     background: transparent;
     padding: .5em 0em;
     border-bottom: 2px solid rgba(0, 0, 0, 0.125);
 }
-*/
+
+.sub-sign {
+    border-color: #04BF74;
+    background: #04BF74;
+    border: 1px solid #04BF74;
+    border-radius: 23.5px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
 .how-it-list li span {
     position: absolute;
     left: 0;
