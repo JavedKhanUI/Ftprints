@@ -254,7 +254,11 @@ a{text-decoration:none;}
 .navbar-light .navbar-nav .nav-link{color:rgba(0, 0, 0, 0.5);text-align:center;}
 .top-padding{padding-top:4em;}
 footer{background:#444444;}
-    
+.bg-light { background-color: rgb(248, 249, 250)}
+.btn-success {color: rgb(255, 255, 255); background-color: rgb(4, 191, 116); border-color: rgb(4, 191, 116);}
+.fixed-bottom{position:fixed;right:0;bottom:0;left:0;z-index:1030;}
+.py-3{padding-top:1rem;}
+.py-3{padding-bottom:1rem;}
 /*Custom Style*/
     
 header.masthead {
@@ -369,8 +373,8 @@ header.masthead {
 }
 }  
 @media only screen and (min-width:320px) and (max-width:767px){
-    
 .classes-categories .card {height: 70vh;}
+header.masthead {padding-top: 5rem;}
     
 }
     
@@ -1147,7 +1151,14 @@ header.masthead {
         </div>
     </div>
 </section>
-
+    
+<!--Add CTA-->
+    
+  <section class="py-3 bg-light fixed-bottom d-block d-sm-none">
+      <div class="container">
+        <a href="#" class="btn btn-success btn-block btn-lg font-weight-bold">Book A Trial Class</a>
+      </div>  
+  </section>
   <!-- FOOTER -->
   <footer class="py-4">
     <div class="container text-center">

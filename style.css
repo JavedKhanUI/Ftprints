@@ -208,6 +208,17 @@ p.course-review-top a {
     background-color: #04BF74;
     border-color: #04BF74;
 }
+.btn-success:not(:disabled):not(.disabled):active, 
+.btn-success:not(:disabled):not(.disabled).active, 
+.show > .btn-success.dropdown-toggle{
+    background-color: #04BF74;
+    border-color: #04BF74; 
+}
+.btn-success:hover,.btn-success:focus, .btn-success.focus{
+    background-color: #04BF74;
+    border-color: #04BF74;
+}
+
 footer {
     background: #444444;
 }
