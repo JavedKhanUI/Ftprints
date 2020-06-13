@@ -143,22 +143,12 @@
                     </div>
                     <p class="age-group pt-3"><span class="font-weight-bold">Age Group</span> - 5 to 8 Years, 8 to 12 Years</p>
                 </div>
-                <div class="accordion" id="accordionCourse">
-                  <div class="card border-0">
-                    <div class="card-header bg-white" id="headingOne">
-                      <a href="#" class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      <h2 class="mb-0">
-                        <button class="btn btn-link btn-block font-weight-bold text-left" type="button">
-                          Chess Courses
-                        </button>
-                      </h2>
-                      <p class="mb-0"><img src="assets/icon/chevron-down-solid-blue.svg" alt="chevron-down" width="15px"></p>
-                      </a>
-                    </div>
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionCourse">
-                      <div class="card-body">
-                         <div class="scrolling-wrapper row flex-row flex-nowrap text-center courses-list">
-                              <div class="card border-0 shadow course-card">
+                <div class="categoryInfo">
+                    <div class="col">
+                    <p class="font-weight-bold h2 mb-4">Chess Categories</p>
+                    <div class="accordion" id="accordionNew">
+                     <div class="scrolling-wrapper row flex-row flex-nowrap text-center courses-list">
+                        <div class="card border-0 shadow course-card">
                                 <div class="p-3">
                                   <picture>
                                       <source type="image/webp" srcset="assets/img/chess-bignner-course.webp">
@@ -170,464 +160,344 @@
                                   <p class="m-0"><img src="assets/icon/user.svg" alt="user"> Jatin Thakkar</p>
                                   <!-- <p class="m-0"><img src="assets/icon/calendar.svg" alt="Uploaded Dated"> 18-05-2020</p>-->
                                 </div>
-                                <div class="card-body pt-2">
+                                <div class="card-body pt-2" id="headingBig">
                                   <h3 class="card-title font-weight-bold">Chess – Beginners</h3>
-                                   <a href="#" class="btn btn-lg btn-course" role="button" aria-pressed="true"><img src="assets/icon/rupees.svg" alt="rupee" width="12"> 2999/Month onwards</a>
+                                   <a data-toggle="collapse" href="#collapseDisc" role="button" aria-expanded="false" aria-controls="collapseDisc" class="btn btn-lg btn-course"  aria-pressed="true">View Description</a>
                                 </div>
                                 <div class="card-footer d-flex justify-content-between bg-white">
                                   <p class="m-0"><img src="assets/icon/users.svg" alt="user"> 5 Seats</p>
                                   <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
                                 </div>
-                              </div>
-                              <div class="card border-0 shadow course-card">
-                                <div class="p-3">
-                                  <picture>
-                                      <source type="image/webp" srcset="assets/img/chess-intermediate-course.webp">
-                                      <source type="image/jpeg" srcset="assets/img/chess-intermediate-course.jpg">
-                                      <img src="assets/img/chess-intermediate-course.jpg" alt="chess intermediate classes" class="img-fluid rounded"> 
-                                  </picture>
-                                </div>
-                                <div class="card-header bg-white d-flex justify-content-between bg-white border-bottom-0">
-                                  <p class="m-0"><img src="assets/icon/user.svg" alt="user"> Jatin Thakkar</p>
-                                  <!-- <p class="m-0"><img src="assets/icon/calendar.svg" alt="Uploaded Dated"> 18-05-2020</p>-->
-                                </div>
-                                <div class="card-body pt-2">
-                                  <h3 class="card-title font-weight-bold">Chess – Intermediate</h3>
-                                   <a href="#" class="btn btn-lg btn-course" role="button" aria-pressed="true"><img src="assets/icon/rupees.svg" alt="rupee" width="12"> 2999/Month onwards</a>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between bg-white">
-                                  <p class="m-0"><img src="assets/icon/users.svg" alt="user"> 5 Seats</p>
-                                  <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
-                                </div>
-                              </div>
+                         </div>
+                        <div class="card border-0 shadow course-card">
+                            <div class="p-3">
+                              <picture>
+                                  <source type="image/webp" srcset="assets/img/chess-intermediate-course.webp">
+                                  <source type="image/jpeg" srcset="assets/img/chess-intermediate-course.jpg">
+                                  <img src="assets/img/chess-intermediate-course.jpg" alt="chess intermediate classes" class="img-fluid rounded"> 
+                              </picture>
+                            </div>
+                            <div class="card-header bg-white d-flex justify-content-between bg-white border-bottom-0">
+                              <p class="m-0"><img src="assets/icon/user.svg" alt="user"> Jatin Thakkar</p>
+                              <!-- <p class="m-0"><img src="assets/icon/calendar.svg" alt="Uploaded Dated"> 18-05-2020</p>-->
+                            </div>
+                            <div class="card-body pt-2">
+                              <h3 class="card-title font-weight-bold">Chess – Intermediate</h3>
+                               <a data-toggle="collapse" href="#collapseDisc2" role="button" aria-expanded="false" aria-controls="collapseDisc2" class="btn btn-lg btn-course"  aria-pressed="true">View Description</a>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between bg-white">
+                              <p class="m-0"><img src="assets/icon/users.svg" alt="user"> 5 Seats</p>
+                              <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
+                            </div>
                           </div>
+                     </div>
+                     <div id="collapseDisc" class="collapse show" aria-labelledby="headingBig" data-parent="#accordionNew">
+                      <div class="card card-body p-0 border-0">
+                         <div class="course-discription mb-4">
+                            <p class="font-weight-bold h2">Chess – Beginners Description</p> 
+                            <div class="accordion" id="accordionExample">
+                              <div class="card border-0">
+                                <div class="card-header" id="headingOne">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left px-0" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                      Class Experience
+                                      <img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15">
+                                    </button>
+                                  </h2>
+                                </div>
+
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                  <div class="card-body p-2">
+                                   If you want to learn chess, then this is the course for you. In this course students will learn the rules of the game, the opening and a few checkmates with the best chess coaches. Our class will begin with a short example of what a...
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card border-0">
+                                <div class="card-header" id="headingTwo">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed px-0" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                      Who is this course for?
+                                      <img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15">
+                                    </button>
+                                  </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                  <div class="card-body p-2">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem hic magnam impedit porro error vero, sequi id voluptatem ipsam distinctio autem doloribus voluptates soluta quo quisquam, fugiat animi assumenda dolores.
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card border-0">
+                                <div class="card-header" id="headingThree">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed px-0" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                      What will you learn?
+                                      <img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15">
+                                    </button>
+                                  </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                  <div class="card-body p-2">
+                                    <ul class="list-group list-group-flush">
+                                      <li class="list-group-item px-1"><img src="assets/icon/check-circle.svg" alt="check" width="18">&nbsp;Introduction to Chess and Basics</li>
+                                      <li class="list-group-item px-1"><img src="assets/icon/check-circle.svg" alt="check" width="18">&nbsp;Chess concepts like Pin & Skewer, Double Attack etc</li>
+                                      <li class="list-group-item px-1"><img src="assets/icon/check-circle.svg" alt="check" width="18">&nbsp;Process of Chess calculation</li>
+                                      <li class="list-group-item px-1"><img src="assets/icon/check-circle.svg" alt="check" width="18">&nbsp;Logical decision making</li>
+                                      <li class="list-group-item px-1"><img src="assets/icon/check-circle.svg" alt="check" width="18">&nbsp;Finding the best move</li>
+                                      <li class="list-group-item px-1"><img src="assets/icon/check-circle.svg" alt="check" width="18">&nbsp;Delivering checkmates</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card border-0">
+                                <div class="card-header" id="headingFour">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed px-0" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                      Requirements?
+                                      <img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15">
+                                    </button>
+                                  </h2>
+                                </div>
+                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                  <div class="card-body p-2">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem hic magnam impedit porro error vero, sequi id voluptatem ipsam distinctio autem doloribus voluptates soluta quo quisquam, fugiat animi assumenda dolores.
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card border-0">
+                                <div class="card-header" id="headingFive">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed px-0" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                                      Why Subscription?
+                                      <img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15">
+                                    </button>
+                                  </h2>
+                                </div>
+                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                                  <div class="card-body p-2">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem hic magnam impedit porro error vero, sequi id voluptatem ipsam distinctio autem doloribus voluptates soluta quo quisquam, fugiat animi assumenda dolores.
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card border-0">
+                                <div class="card-header" id="headingSix">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed px-0" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseTwo">
+                                      What kind of teachers you have?
+                                      <img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15">
+                                    </button>
+                                  </h2>
+                                </div>
+                                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                                  <div class="card-body p-2">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem hic magnam impedit porro error vero, sequi id voluptatem ipsam distinctio autem doloribus voluptates soluta quo quisquam, fugiat animi assumenda dolores.
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card border-0">
+                                <div class="card-header" id="headingSeaven">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed px-0" type="button" data-toggle="collapse" data-target="#collapseSeaven" aria-expanded="false" aria-controls="collapseThree">
+                                      Why Online, will it work for me?
+                                      <img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15">
+                                    </button>
+                                  </h2>
+                                </div>
+                                <div id="collapseSeaven" class="collapse" aria-labelledby="headingSeaven" data-parent="#accordionExample">
+                                  <div class="card-body p-2">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem hic magnam impedit porro error vero, sequi id voluptatem ipsam distinctio autem doloribus voluptates soluta quo quisquam, fugiat animi assumenda dolores.
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card border-0">
+                                <div class="card-header" id="headingEight">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed px-0" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseTwo">
+                                      How does an online class work?
+                                      <img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15">
+                                    </button>
+                                  </h2>
+                                </div>
+                                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+                                  <div class="card-body p-2">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem hic magnam impedit porro error vero, sequi id voluptatem ipsam distinctio autem doloribus voluptates soluta quo quisquam, fugiat animi assumenda dolores.
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card border-0">
+                                <div class="card-header" id="headingNine">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed px-0" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseThree">
+                                      Do you offer Free Trial
+                                      <img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15">
+                                    </button>
+                                  </h2>
+                                </div>
+                                <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
+                                  <div class="card-body p-2">
+                                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem hic magnam impedit porro error vero, sequi id voluptatem ipsam distinctio autem doloribus voluptates soluta quo quisquam, fugiat animi assumenda dolores.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="card border-0">
-                    <div class="card-header bg-white" id="headingTwo">
-                    <a href="#" class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      <h2 class="mb-0">
-                        <button class="btn btn-link btn-block font-weight-bold text-left collapsed" type="button">
-                          Maths Courses
-                        </button>
-                      </h2>
-                      <p class="mb-0"><img src="assets/icon/chevron-down-solid-blue.svg" alt="chevron-down" width="15px"></p>
-                    </a>
-                    </div>
-                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionCourse">
-                      <div class="card-body">
-                         <div class="scrolling-wrapper row flex-row flex-nowrap text-center courses-list">
-                              <div class="card border-0 shadow course-card">
-                                <div class="p-3">
-                                  <picture>
-                                      <source type="image/webp" srcset="assets/img/abacus-beginners-course.webp">
-                                      <source type="image/jpeg" srcset="assets/img/abacus-beginners-course.jpg">
-                                      <img src="assets/img/abacus-beginners-course.jpg" alt="abacus beginners classes" class="img-fluid rounded"> 
-                                  </picture>
+                     <div id="collapseDisc2" class="collapse" aria-labelledby="headingBig" data-parent="#accordionNew">
+                      <div class="card card-body p-0 border-0">
+                         <div class="course-discription mb-4">
+                            <p class="font-weight-bold h2">Chess – Intermediate Description</p> 
+                            <div class="accordion" id="accordionExample2">
+                              <div class="card border-0">
+                                <div class="card-header" id="headingTen">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left px-0" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="true" aria-controls="collapseOne">
+                                      Class Experience
+                                      <img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15">
+                                    </button>
+                                  </h2>
                                 </div>
-                                <div class="card-header d-flex justify-content-between bg-white border-bottom-0">
-                                  <p class="m-0"><img src="assets/icon/user.svg" alt="user"> Jatin Thakkar</p>
-                                  <!-- <p class="m-0"><img src="assets/icon/calendar.svg" alt="Uploaded Dated"> 18-05-2020</p>-->
-                                </div>
-                                <div class="card-body pt-2">
-                                  <h3 class="card-title font-weight-bold">Abacus – Beginners</h3>
-                                   <a href="#" class="btn btn-lg btn-course" role="button" aria-pressed="true"><img src="assets/icon/rupees.svg" alt="rupee" width="12"> 2999/Month onwards</a>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between bg-white">
-                                  <p class="m-0"><img src="assets/icon/users.svg" alt="user"> 5 Seats</p>
-                                  <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
+
+                                <div id="collapseTen" class="collapse show" aria-labelledby="headingTen" data-parent="#accordionExample2">
+                                  <div class="card-body p-2">
+                                   If you want to learn chess, then this is the course for you. In this course students will learn the rules of the game, the opening and a few checkmates with the best chess coaches. Our class will begin with a short example of what a...
+                                  </div>
                                 </div>
                               </div>
-                              <div class="card border-0 shadow course-card">
-                                <div class="p-3">
-                                  <picture>
-                                      <source type="image/webp" srcset="assets/img/abacus-intermediate.webp">
-                                      <source type="image/jpeg" srcset="assets/img/abacus-intermediate.jpg">
-                                      <img src="assets/img/abacus-intermediate.jpg" alt="abacus intermediate classes" class="img-fluid rounded"> 
-                                  </picture>
+                              <div class="card border-0">
+                                <div class="card-header" id="headingEleven">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed px-0" type="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                                      Who is this course for?
+                                      <img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15">
+                                    </button>
+                                  </h2>
                                 </div>
-                                <div class="card-header d-flex justify-content-between bg-white border-bottom-0">
-                                  <p class="m-0"><img src="assets/icon/user.svg" alt="user"> Jatin Thakkar</p>
-                                  <!-- <p class="m-0"><img src="assets/icon/calendar.svg" alt="Uploaded Dated"> 18-05-2020</p>-->
-                                </div>
-                                <div class="card-body pt-2">
-                                  <h3 class="card-title font-weight-bold">Abacus – Intermediate</h3>
-                                   <a href="#" class="btn btn-lg btn-course" role="button" aria-pressed="true"><img src="assets/icon/rupees.svg" alt="rupee" width="12"> 2999/Month onwards</a>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between bg-white">
-                                  <p class="m-0"><img src="assets/icon/users.svg" alt="user"> 5 Seats</p>
-                                  <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
+                                <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordionExample2">
+                                  <div class="card-body p-2">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem hic magnam impedit porro error vero, sequi id voluptatem ipsam distinctio autem doloribus voluptates soluta quo quisquam, fugiat animi assumenda dolores.
+                                  </div>
                                 </div>
                               </div>
-                              <div class="card border-0 shadow course-card">
-                                <div class="p-3">
-                                  <picture>
-                                      <source type="image/webp" srcset="assets/img/vedic-mathematics.webp">
-                                      <source type="image/jpeg" srcset="assets/img/vedic-mathematics.jpg">
-                                      <img src="assets/img/vedic-mathematics.jpg" alt="vedic mathematics classes" class="img-fluid rounded"> 
-                                  </picture>
+                              <div class="card border-0">
+                                <div class="card-header" id="headingTwelve">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed px-0" type="button" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                                      What will you learn?
+                                      <img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15">
+                                    </button>
+                                  </h2>
                                 </div>
-                                <div class="card-header bg-white d-flex justify-content-between bg-white border-bottom-0">
-                                  <p class="m-0"><img src="assets/icon/user.svg" alt="user"> Jatin Thakkar</p>
-                                  <!-- <p class="m-0"><img src="assets/icon/calendar.svg" alt="Uploaded Dated"> 18-05-2020</p>-->
-                                </div>
-                                <div class="card-body pt-2">
-                                  <h3 class="card-title font-weight-bold">Vedic – Mathematics</h3>
-                                   <a href="#" class="btn btn-lg btn-course" role="button" aria-pressed="true"><img src="assets/icon/rupees.svg" alt="rupee" width="12"> 2999/Month onwards</a>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between bg-white">
-                                  <p class="m-0"><img src="assets/icon/users.svg" alt="user"> 5 Seats</p>
-                                  <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
+                                <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#accordionExample2">
+                                  <div class="card-body p-2">
+                                    <ul class="list-group list-group-flush">
+                                      <li class="list-group-item px-1"><img src="assets/icon/check-circle.svg" alt="check" width="18">&nbsp;Introduction to Chess and Basics</li>
+                                      <li class="list-group-item px-1"><img src="assets/icon/check-circle.svg" alt="check" width="18">&nbsp;Chess concepts like Pin & Skewer, Double Attack etc</li>
+                                      <li class="list-group-item px-1"><img src="assets/icon/check-circle.svg" alt="check" width="18">&nbsp;Process of Chess calculation</li>
+                                      <li class="list-group-item px-1"><img src="assets/icon/check-circle.svg" alt="check" width="18">&nbsp;Logical decision making</li>
+                                      <li class="list-group-item px-1"><img src="assets/icon/check-circle.svg" alt="check" width="18">&nbsp;Finding the best move</li>
+                                      <li class="list-group-item px-1"><img src="assets/icon/check-circle.svg" alt="check" width="18">&nbsp;Delivering checkmates</li>
+                                    </ul>
+                                  </div>
                                 </div>
                               </div>
-                          </div>
+                              <div class="card border-0">
+                                <div class="card-header" id="headingThirteen">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed px-0" type="button" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                                      Requirements?
+                                      <img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15">
+                                    </button>
+                                  </h2>
+                                </div>
+                                <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#accordionExample2">
+                                  <div class="card-body p-2">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem hic magnam impedit porro error vero, sequi id voluptatem ipsam distinctio autem doloribus voluptates soluta quo quisquam, fugiat animi assumenda dolores.
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card border-0">
+                                <div class="card-header" id="headingFourteen">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed px-0" type="button" data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseThree">
+                                      Why Subscription?
+                                      <img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15">
+                                    </button>
+                                  </h2>
+                                </div>
+                                <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen" data-parent="#accordionExample2">
+                                  <div class="card-body p-2">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem hic magnam impedit porro error vero, sequi id voluptatem ipsam distinctio autem doloribus voluptates soluta quo quisquam, fugiat animi assumenda dolores.
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card border-0">
+                                <div class="card-header" id="headingFifteen">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed px-0" type="button" data-toggle="collapse" data-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                                      What kind of teachers you have?
+                                      <img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15">
+                                    </button>
+                                  </h2>
+                                </div>
+                                <div id="collapseFifteen" class="collapse" aria-labelledby="headingFifteen" data-parent="#accordionExample2">
+                                  <div class="card-body p-2">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem hic magnam impedit porro error vero, sequi id voluptatem ipsam distinctio autem doloribus voluptates soluta quo quisquam, fugiat animi assumenda dolores.
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card border-0">
+                                <div class="card-header" id="headingSixteen">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed px-0" type="button" data-toggle="collapse" data-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+                                      Why Online, will it work for me?
+                                      <img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15">
+                                    </button>
+                                  </h2>
+                                </div>
+                                <div id="collapseSixteen" class="collapse" aria-labelledby="headingSixteen" data-parent="#accordionExample2">
+                                  <div class="card-body p-2">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem hic magnam impedit porro error vero, sequi id voluptatem ipsam distinctio autem doloribus voluptates soluta quo quisquam, fugiat animi assumenda dolores.
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card border-0">
+                                <div class="card-header" id="headingSeventeen">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed px-0" type="button" data-toggle="collapse" data-target="#collapseSeventeen" aria-expanded="false" aria-controls="collapseTwo">
+                                      How does an online class work?
+                                      <img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15">
+                                    </button>
+                                  </h2>
+                                </div>
+                                <div id="collapseSeventeen" class="collapse" aria-labelledby="headingSeventeen" data-parent="#accordionExample2">
+                                  <div class="card-body p-2">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem hic magnam impedit porro error vero, sequi id voluptatem ipsam distinctio autem doloribus voluptates soluta quo quisquam, fugiat animi assumenda dolores.
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card border-0">
+                                <div class="card-header" id="headingEighteen">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed px-0" type="button" data-toggle="collapse" data-target="#collapseEighteen" aria-expanded="false" aria-controls="collapseEighteen">
+                                      Do you offer Free Trial
+                                      <img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15">
+                                    </button>
+                                  </h2>
+                                </div>
+                                <div id="collapseEighteen" class="collapse" aria-labelledby="headingEighteen" data-parent="#accordionExample2">
+                                  <div class="card-body p-2">
+                                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem hic magnam impedit porro error vero, sequi id voluptatem ipsam distinctio autem doloribus voluptates soluta quo quisquam, fugiat animi assumenda dolores.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="card border-0">
-                    <div class="card-header bg-white" id="headingThree">
-                     <a href="#" class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      <h2 class="mb-0">
-                        <button class="btn btn-link btn-block font-weight-bold text-left collapsed" type="button">
-                          Coding Courses
-                        </button>
-                      </h2>
-                      <p class="mb-0"><img src="assets/icon/chevron-down-solid-blue.svg" alt="chevron-down" width="15px"></p>
-                     </a>
                     </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionCourse">
-                      <div class="card-body">
-                           <div class="scrolling-wrapper row flex-row flex-nowrap text-center courses-list">
-                              <div class="card border-0 shadow course-card">
-                                <div class="p-3">
-                                  <picture>
-                                      <source type="image/webp" srcset="assets/img/coding-basic-android.webp">
-                                      <source type="image/jpeg" srcset="assets/img/coding-basic-android.jpg">
-                                      <img src="assets/img/coding-basic-android.jpg" alt="coding basic android classes" class="img-fluid rounded"> 
-                                  </picture>
-                                </div>
-                                <div class="card-header d-flex justify-content-between bg-white border-bottom-0">
-                                  <p class="m-0"><img src="assets/icon/user.svg" alt="user"> Jatin Thakkar</p>
-                                  <!-- <p class="m-0"><img src="assets/icon/calendar.svg" alt="Uploaded Dated"> 18-05-2020</p>-->
-                                </div>
-                                <div class="card-body pt-2">
-                                  <h3 class="card-title font-weight-bold">Coding – Basic Android</h3>
-                                   <a href="#" class="btn btn-lg btn-course" role="button" aria-pressed="true"><img src="assets/icon/rupees.svg" alt="rupee" width="12"> 2999/Month onwards</a>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between bg-white">
-                                  <p class="m-0"><img src="assets/icon/users.svg" alt="user"> 5 Seats</p>
-                                  <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
-                                </div>
-                              </div>
-                              <div class="card border-0 shadow course-card">
-                                <div class="p-3">
-                                  <picture>
-                                      <source type="image/webp" srcset="assets/img/coding-scratch.webp">
-                                      <source type="image/jpeg" srcset="assets/img/coding-scratch.jpg">
-                                      <img src="assets/img/coding-scratch.jpg" alt="coding scratch classes" class="img-fluid rounded"> 
-                                  </picture>
-                                </div>
-                                <div class="card-header d-flex justify-content-between bg-white border-bottom-0">
-                                  <p class="m-0"><img src="assets/icon/user.svg" alt="user"> Jatin Thakkar</p>
-                                  <!-- <p class="m-0"><img src="assets/icon/calendar.svg" alt="Uploaded Dated"> 18-05-2020</p>-->
-                                </div>
-                                <div class="card-body pt-2">
-                                  <h3 class="card-title font-weight-bold">Coding – Scratch</h3>
-                                   <a href="#" class="btn btn-lg btn-course" role="button" aria-pressed="true"><img src="assets/icon/rupees.svg" alt="rupee" width="12"> 2999/Month onwards</a>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between bg-white">
-                                  <p class="m-0"><img src="assets/icon/users.svg" alt="user"> 5 Seats</p>
-                                  <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
-                                </div>
-                              </div>
-                              <div class="card border-0 shadow course-card">
-                                <div class="p-3">
-                                  <picture>
-                                      <source type="image/webp" srcset="assets/img/coding-python.webp">
-                                      <source type="image/jpeg" srcset="assets/img/coding-python.jpg">
-                                      <img src="assets/img/coding-python.jpg" alt="coding python classes" class="img-fluid rounded"> 
-                                  </picture>
-                                </div>
-                                <div class="card-header bg-white d-flex justify-content-between bg-white border-bottom-0">
-                                  <p class="m-0"><img src="assets/icon/user.svg" alt="user"> Jatin Thakkar</p>
-                                  <!-- <p class="m-0"><img src="assets/icon/calendar.svg" alt="Uploaded Dated"> 18-05-2020</p>-->
-                                </div>
-                                <div class="card-body pt-2">
-                                  <h3 class="card-title font-weight-bold">Coding – Python</h3>
-                                   <a href="#" class="btn btn-lg btn-course" role="button" aria-pressed="true"><img src="assets/icon/rupees.svg" alt="rupee" width="12"> 2999/Month onwards</a>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between bg-white">
-                                  <p class="m-0"><img src="assets/icon/users.svg" alt="user"> 5 Seats</p>
-                                  <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
-                                </div>
-                              </div>
-                          </div>
-                      </div>
                     </div>
-                  </div>
-                  <div class="card border-0">
-                    <div class="card-header bg-white" id="headingFour">
-                      <a href="#" class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                      <h2 class="mb-0">
-                        <button class="btn btn-link btn-block font-weight-bold text-left collapsed" type="button">
-                          Dance Courses
-                        </button>
-                      </h2>
-                      <p class="mb-0"><img src="assets/icon/chevron-down-solid-blue.svg" alt="chevron-down" width="15px"></p>
-                      </a>
-                    </div>
-                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionCourse">
-                      <div class="card-body">
-                         <div class="scrolling-wrapper row flex-row flex-nowrap text-center courses-list">
-                              <div class="card border-0 shadow course-card">
-                                <div class="p-3">
-                                  <picture>
-                                      <source type="image/webp" srcset="assets/img/dance-kathak.webp">
-                                      <source type="image/jpeg" srcset="assets/img/dance-kathak.jpg">
-                                      <img src="assets/img/dance-kathak.jpg" alt="dance kathak classes" class="img-fluid rounded"> 
-                                  </picture>
-                                </div>
-                                <div class="card-header d-flex justify-content-between bg-white border-bottom-0">
-                                  <p class="m-0"><img src="assets/icon/user.svg" alt="user"> Jatin Thakkar</p>
-                                  <!-- <p class="m-0"><img src="assets/icon/calendar.svg" alt="Uploaded Dated"> 18-05-2020</p>-->
-                                </div>
-                                <div class="card-body pt-2">
-                                  <h3 class="card-title font-weight-bold">Dance – Kathak</h3>
-                                   <a href="#" class="btn btn-lg btn-course" role="button" aria-pressed="true"><img src="assets/icon/rupees.svg" alt="rupee" width="12"> 2999/Month onwards</a>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between bg-white">
-                                  <p class="m-0"><img src="assets/icon/users.svg" alt="user"> 5 Seats</p>
-                                  <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
-                                </div>
-                              </div>
-                              <div class="card border-0 shadow course-card">
-                                <div class="p-3">
-                                  <picture>
-                                      <source type="image/webp" srcset="assets/img/dance-jazz.webp">
-                                      <source type="image/jpeg" srcset="assets/img/dance-jazz.jpg">
-                                      <img src="assets/img/dance-jazz.jpg" alt="Dance Jazz classes" class="img-fluid rounded"> 
-                                  </picture>
-                                </div>
-                                <div class="card-header d-flex justify-content-between bg-white border-bottom-0">
-                                  <p class="m-0"><img src="assets/icon/user.svg" alt="user"> Jatin Thakkar</p>
-                                  <!-- <p class="m-0"><img src="assets/icon/calendar.svg" alt="Uploaded Dated"> 18-05-2020</p>-->
-                                </div>
-                                <div class="card-body pt-2">
-                                  <h3 class="card-title font-weight-bold">Dance – Jazz</h3>
-                                   <a href="#" class="btn btn-lg btn-course" role="button" aria-pressed="true"><img src="assets/icon/rupees.svg" alt="rupee" width="12"> 2999/Month onwards</a>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between bg-white">
-                                  <p class="m-0"><img src="assets/icon/users.svg" alt="user"> 5 Seats</p>
-                                  <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
-                                </div>
-                              </div>
-                              <div class="card border-0 shadow course-card">
-                                <div class="p-3">
-                                  <picture>
-                                      <source type="image/webp" srcset="assets/img/bollywood-hiphop.webp">
-                                      <source type="image/jpeg" srcset="assets/img/bollywood-hiphop.jpg">
-                                      <img src="assets/img/bollywood-hiphop.jpg" alt="Dance Bollywood Hiphop classes" class="img-fluid rounded"> 
-                                  </picture>
-                                </div>
-                                <div class="card-header bg-white d-flex justify-content-between bg-white border-bottom-0">
-                                  <p class="m-0"><img src="assets/icon/user.svg" alt="user"> Jatin Thakkar</p>
-                                  <!-- <p class="m-0"><img src="assets/icon/calendar.svg" alt="Uploaded Dated"> 18-05-2020</p>-->
-                                </div>
-                                <div class="card-body pt-2">
-                                  <h3 class="card-title font-weight-bold">Dance – Bollywood Hiphop</h3>
-                                   <a href="#" class="btn btn-lg btn-course" role="button" aria-pressed="true"><img src="assets/icon/rupees.svg" alt="rupee" width="12"> 2999/Month onwards</a>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between bg-white">
-                                  <p class="m-0"><img src="assets/icon/users.svg" alt="user"> 5 Seats</p>
-                                  <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
-                                </div>
-                              </div>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card border-0">
-                    <div class="card-header bg-white" id="headingFive">
-                    <a href="#" class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                      <h2 class="mb-0">
-                        <button class="btn btn-link btn-block font-weight-bold text-left collapsed" type="button">
-                          Yoga Courses
-                        </button>
-                      </h2>
-                      <p class="mb-0"><img src="assets/icon/chevron-down-solid-blue.svg" alt="chevron-down" width="15px"></p>
-                    </a>
-                    </div>
-                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionCourse">
-                      <div class="card-body">
-                         <div class="scrolling-wrapper row flex-row flex-nowrap text-center courses-list">
-                              <div class="card border-0 shadow course-card">
-                                <div class="p-3">
-                                  <picture>
-                                      <source type="image/webp" srcset="assets/img/yoga-advanced.webp">
-                                      <source type="image/jpeg" srcset="assets/img/yoga-advanced.jpg">
-                                      <img src="assets/img/yoga-advanced.jpg" alt="yoga advanced classes" class="img-fluid rounded"> 
-                                  </picture>
-                                </div>
-                                <div class="card-header d-flex justify-content-between bg-white border-bottom-0">
-                                  <p class="m-0"><img src="assets/icon/user.svg" alt="user"> Jatin Thakkar</p>
-                                  <!-- <p class="m-0"><img src="assets/icon/calendar.svg" alt="Uploaded Dated"> 18-05-2020</p>-->
-                                </div>
-                                <div class="card-body pt-2">
-                                  <h3 class="card-title font-weight-bold">YOGA – Advanced</h3>
-                                   <a href="#" class="btn btn-lg btn-course" role="button" aria-pressed="true"><img src="assets/icon/rupees.svg" alt="rupee" width="12"> 2999/Month onwards</a>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between bg-white">
-                                  <p class="m-0"><img src="assets/icon/users.svg" alt="user"> 5 Seats</p>
-                                  <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
-                                </div>
-                              </div>
-                              <div class="card border-0 shadow course-card">
-                                <div class="p-3">
-                                  <picture>
-                                      <source type="image/webp" srcset="assets/img/yoga-for-children.webp">
-                                      <source type="image/jpeg" srcset="assets/img/yoga-for-children.jpg">
-                                      <img src="assets/img/yoga-for-children.jpg" alt="yoga for children classes" class="img-fluid rounded"> 
-                                  </picture>
-                                </div>
-                                <div class="card-header d-flex justify-content-between bg-white border-bottom-0">
-                                  <p class="m-0"><img src="assets/icon/user.svg" alt="user"> Jatin Thakkar</p>
-                                  <!-- <p class="m-0"><img src="assets/icon/calendar.svg" alt="Uploaded Dated"> 18-05-2020</p>-->
-                                </div>
-                                <div class="card-body pt-2">
-                                  <h3 class="card-title font-weight-bold">YOGA for children</h3>
-                                   <a href="#" class="btn btn-lg btn-course" role="button" aria-pressed="true"><img src="assets/icon/rupees.svg" alt="rupee" width="12"> 2999/Month onwards</a>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between bg-white">
-                                  <p class="m-0"><img src="assets/icon/users.svg" alt="user"> 5 Seats</p>
-                                  <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
-                                </div>
-                              </div>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card border-0">
-                    <div class="card-header bg-white" id="headingSix">
-                    <a href="#" class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                      <h2 class="mb-0">
-                        <button class="btn btn-link btn-block font-weight-bold text-left collapsed" type="button">
-                          Music Courses
-                        </button>
-                      </h2>
-                      <p class="mb-0"><img src="assets/icon/chevron-down-solid-blue.svg" alt="chevron-down" width="15px"></p>
-                    </a>
-                    </div>
-                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionCourse">
-                      <div class="card-body">
-                        <div class="scrolling-wrapper row flex-row flex-nowrap text-center courses-list">
-                              <div class="card border-0 shadow course-card">
-                                <div class="p-3">
-                                  <picture>
-                                      <source type="image/webp" srcset="assets/img/guitar-beginners.webp">
-                                      <source type="image/jpeg" srcset="assets/img/guitar-beginners.jpg">
-                                      <img src="assets/img/guitar-beginners.jpg" alt="guitar beginners classes" class="img-fluid rounded"> 
-                                  </picture>
-                                </div>
-                                <div class="card-header d-flex justify-content-between bg-white border-bottom-0">
-                                  <p class="m-0"><img src="assets/icon/user.svg" alt="user"> Jatin Thakkar</p>
-                                  <!-- <p class="m-0"><img src="assets/icon/calendar.svg" alt="Uploaded Dated"> 18-05-2020</p>-->
-                                </div>
-                                <div class="card-body pt-2">
-                                  <h3 class="card-title font-weight-bold">Guitar – Beginners</h3>
-                                   <a href="#" class="btn btn-lg btn-course" role="button" aria-pressed="true"><img src="assets/icon/rupees.svg" alt="rupee" width="12"> 2999/Month onwards</a>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between bg-white">
-                                  <p class="m-0"><img src="assets/icon/users.svg" alt="user"> 5 Seats</p>
-                                  <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
-                                </div>
-                              </div>
-                              <div class="card border-0 shadow course-card">
-                                <div class="p-3">
-                                  <picture>
-                                      <source type="image/webp" srcset="assets/img/vocal-music-beginners.webp">
-                                      <source type="image/jpeg" srcset="assets/img/vocal-music-beginners.jpg">
-                                      <img src="assets/img/vocal-music-beginners.jpg" alt="vocal music beginners classes" class="img-fluid rounded"> 
-                                  </picture>
-                                </div>
-                                <div class="card-header d-flex justify-content-between bg-white border-bottom-0">
-                                  <p class="m-0"><img src="assets/icon/user.svg" alt="user"> Jatin Thakkar</p>
-                                  <!-- <p class="m-0"><img src="assets/icon/calendar.svg" alt="Uploaded Dated"> 18-05-2020</p>-->
-                                </div>
-                                <div class="card-body pt-2">
-                                  <h3 class="card-title font-weight-bold">Vocal Music – Beginners</h3>
-                                   <a href="#" class="btn btn-lg btn-course" role="button" aria-pressed="true"><img src="assets/icon/rupees.svg" alt="rupee" width="12"> 2999/Month onwards</a>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between bg-white">
-                                  <p class="m-0"><img src="assets/icon/users.svg" alt="user"> 5 Seats</p>
-                                  <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
-                                </div>
-                              </div>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card border-0">
-                    <div class="card-header bg-white" id="headingSeven">
-                    <a href="#" class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                      <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left font-weight-bold collapsed" type="button">
-                          French Courses
-                        </button>
-                      </h2>
-                      <p class="mb-0"><img src="assets/icon/chevron-down-solid-blue.svg" alt="chevron-down" width="15px"></p>
-                    </a>
-                    </div>
-                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionCourse">
-                      <div class="card-body">
-                         <div class="scrolling-wrapper row flex-row flex-nowrap text-center courses-list">
-                              <div class="card border-0 shadow course-card">
-                                <div class="p-3">
-                                  <picture>
-                                      <source type="image/webp" srcset="assets/img/french-beginners.webp">
-                                      <source type="image/jpeg" srcset="assets/img/french-beginners.jpg">
-                                      <img src="assets/img/french-beginners.jpg" alt="french beginners classes" class="img-fluid rounded"> 
-                                  </picture>
-                                </div>
-                                <div class="card-header d-flex justify-content-between bg-white border-bottom-0">
-                                  <p class="m-0"><img src="assets/icon/user.svg" alt="user"> Jatin Thakkar</p>
-                                  <!-- <p class="m-0"><img src="assets/icon/calendar.svg" alt="Uploaded Dated"> 18-05-2020</p>-->
-                                </div>
-                                <div class="card-body pt-2">
-                                  <h3 class="card-title font-weight-bold">French – Beginners</h3>
-                                   <a href="#" class="btn btn-lg btn-course" role="button" aria-pressed="true"><img src="assets/icon/rupees.svg" alt="rupee" width="12"> 2999/Month onwards</a>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between bg-white">
-                                  <p class="m-0"><img src="assets/icon/users.svg" alt="user"> 5 Seats</p>
-                                  <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
-                                </div>
-                              </div>
-                              <div class="card border-0 shadow course-card">
-                                <div class="p-3">
-                                  <picture>
-                                      <source type="image/webp" srcset="assets/img/french-professional.webp">
-                                      <source type="image/jpeg" srcset="assets/img/french-professional.jpg">
-                                      <img src="assets/img/french-professional.jpg" alt="french professional classes" class="img-fluid rounded"> 
-                                  </picture>
-                                </div>
-                                <div class="card-header d-flex justify-content-between bg-white border-bottom-0">
-                                  <p class="m-0"><img src="assets/icon/user.svg" alt="user"> Jatin Thakkar</p>
-                                  <!-- <p class="m-0"><img src="assets/icon/calendar.svg" alt="Uploaded Dated"> 18-05-2020</p>-->
-                                </div>
-                                <div class="card-body pt-2">
-                                  <h3 class="card-title font-weight-bold">French – Professional</h3>
-                                   <a href="#" class="btn btn-lg btn-course" role="button" aria-pressed="true"><img src="assets/icon/rupees.svg" alt="rupee" width="12"> 2999/Month onwards</a>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between bg-white">
-                                  <p class="m-0"><img src="assets/icon/users.svg" alt="user"> 5 Seats</p>
-                                  <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
-                                </div>
-                              </div>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                </div>  
             </div>
             <div class="col-md-4">
                 <div class="trial-class-form mb-4" id="bookTrail">
