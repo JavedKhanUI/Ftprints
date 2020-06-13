@@ -65,7 +65,7 @@
 <body>
 <header>
   <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white py-4 shadow">
-    <div class="container"> <a class="navbar-brand" href="#"><img src="assets/img/Footprints-Logo.svg" alt="Footprints Logo" width="200"></a>
+    <div class="container"> <a class="navbar-brand" href="index.html"><img src="assets/img/Footprints-Logo.svg" alt="Footprints Logo" width="200"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav ml-auto">
@@ -293,7 +293,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="trial-class-form mb-4">
+                <div class="trial-class-form mb-4" id="bookTrail">
                     <div class="card border-0 shadow">
                         <div class="card-header text-center">
                             <h4 class="m-0 font-weight-bold">BOOK A TRIAL CLASS</h4>
@@ -310,7 +310,7 @@
                                     Please provide your name
                                   </div>
                               </div>
-                             <div class="form-group">
+                              <div class="form-group">
                                   <label for="validationCustom02" class="sr-only">Your Email</label>
                                   <input type="text" class="form-control badge-pill" id="validationCustom02" placeholder="Your Email (required)" required>
                                   <div class="valid-feedback">
@@ -548,9 +548,9 @@
         </div>
     </div>
   </section>
-  <section class="py-3 bg-light fixed-bottom d-block d-sm-none">
+<section class="py-3 bg-light fixed-bottom d-block d-sm-none">
       <div class="container">
-        <a href="#" class="btn btn-success btn-block btn-lg font-weight-bold">Book A Trial Class</a>
+        <a href="#bookTrail" class="btn btn-success btn-block btn-lg font-weight-bold">Book A Trial Class</a>
       </div>  
   </section>
   <!-- FOOTER -->
@@ -561,7 +561,7 @@
     </div>
   </footer>
 </main>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 <script src="js/bootstrap.bundle.js"></script>
 <script>
 // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -582,6 +582,15 @@
     });
   }, false);
 })();
+</script>
+<script>
+    $(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top - 90 //Add this
+    }, 300);
+});
 </script>
 </body>
 </html>
