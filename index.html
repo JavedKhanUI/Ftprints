@@ -89,65 +89,18 @@ header.masthead {
 .masthead p {font-size: 2em;}    
 }
     
-.scrolling-wrapper{
-	overflow-x: auto;
-}
-.card-img-overlay {
-    background: rgba(0, 0, 0, 0.27);
-}
-.all-course .course-card {
-    background: #FFFFFF;
-    border-radius: 19px;
-}
-#accordionCourse .card-header {
-    border-bottom: 2px solid #dfdfdf;
-}
-.all-course .card .card-footer {
-    border-radius: 0 0 19px 19px;
-}
-.courses-list .col-12:first-child .card .card-body h3 {
-    color: #53cfa4;
-    font-size: 1.4em;
-}
-.courses-list .col-12:first-child .card .card-body .btn-course {
-    background:#53cfa4;
-    box-shadow:0 2px 25px 0 rgba(83,207,165,0.42);
-    border:#53cfa4;
-}    
-.courses-list .col-12:nth-child(2) .card .card-body h3 {
-    color: #625DEB;
-    font-size: 1.4em;
-}
-.courses-list .col-12:nth-child(2) .card .card-body .btn-course {
-    background: #625eea;
-    box-shadow: 0 2px 25px 0 rgba(98, 94, 234, 0.44);
-    border: #625eea;
-}
-.courses-list .col-12:last-child .card .card-body h3 {
-    color: #FF004E;
-    font-size: 1.4em;
-}
-.courses-list .col-12:last-child .card .card-body .btn-course {
-    background:#FF004E;
-    box-shadow: 0 2px 25px 0 rgba(232,24,75,0.25);
-    border:#FF004E;
-}
 .learning p:first-child {
     font-size: 1.4em;
 }
-    
-.btn-course {
-    border-radius: 35.5px;
-    padding: .8em 2em;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 700;
-}
-.btn-course:hover {
+.card-img-overlay {
+    background: rgba(0, 0, 0, 0.27);
+} 
+
+#bookTrialModal .modal-header {
+    background: #FBA505;
     color: #fff;
 }
  
-
 @media (min-width: 576px){
 .card-columns {
     -webkit-column-count: 4;
@@ -160,10 +113,9 @@ header.masthead {
     widows: 1;
 }
 }  
-@media only screen and (min-width:320px) and (max-width:767px){
-    
+@media only screen and (min-width:320px) and (max-width:767px){ 
 .classes-categories .card {height: 70vh;}
-    
+header.masthead {padding-top: 5rem;}  
 }
 
 </style>
@@ -172,7 +124,7 @@ header.masthead {
 </head>
 <body>
   <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white py-4 shadow">
-    <div class="container"> <a class="navbar-brand" href="#"><img src="assets/img/Footprints-Logo.svg" alt="Footprints Logo" width="200"></a>
+    <div class="container"> <a class="navbar-brand" href="index.html"><img src="assets/img/Footprints-Logo.svg" alt="Footprints Logo" width="200"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav ml-auto">
@@ -270,7 +222,7 @@ header.masthead {
             </a>
           </div>
           <div class="col-sm-6">
-            <a href="#">
+            <a href="chess-categories.html">
               <div class="card border-0 mb-3" style="background:linear-gradient(to bottom, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.28) 100%), url('assets/img/chess-classes.jpg')no-repeat top center; background-size: cover;">
               <div class="card-body align-items-center d-flex justify-content-center">
                 <h5 class="card-title text-white font-weight-bold mb-1">Chess</h5>
@@ -376,7 +328,6 @@ header.masthead {
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionCourse">
           <div class="card-body">
              <div class="scrolling-wrapper row flex-row flex-nowrap text-center courses-list">
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4">
                   <div class="card border-0 shadow course-card">
                     <div class="p-3">
                       <picture>
@@ -391,15 +342,13 @@ header.masthead {
                     </div>
                     <div class="card-body pt-2">
                       <h3 class="card-title font-weight-bold">Chess – Beginners</h3>
-                       <a href="#" class="btn btn-lg btn-course" role="button" aria-pressed="true"><img src="assets/icon/rupees.svg" alt="rupee" width="12"> 2999/Month onwards</a>
+                       <a href="chess–beginners.html" class="btn btn-lg btn-course" role="button" aria-pressed="true"><img src="assets/icon/rupees.svg" alt="rupee" width="12"> 2999/Month onwards</a>
                     </div>
                     <div class="card-footer d-flex justify-content-between bg-white">
                       <p class="m-0"><img src="assets/icon/users.svg" alt="user"> 5 Seats</p>
                       <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
                     </div>
                   </div>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4">
                   <div class="card border-0 shadow course-card">
                     <div class="p-3">
                       <picture>
@@ -421,7 +370,6 @@ header.masthead {
                       <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
                     </div>
                   </div>
-                </div>
               </div>
           </div>
         </div>
@@ -440,7 +388,6 @@ header.masthead {
         <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionCourse">
           <div class="card-body">
              <div class="scrolling-wrapper row flex-row flex-nowrap text-center courses-list">
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4">
                   <div class="card border-0 shadow course-card">
                     <div class="p-3">
                       <picture>
@@ -462,8 +409,6 @@ header.masthead {
                       <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
                     </div>
                   </div>
-                </div>
-                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4">
                   <div class="card border-0 shadow course-card">
                     <div class="p-3">
                       <picture>
@@ -485,8 +430,6 @@ header.masthead {
                       <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
                     </div>
                   </div>
-                </div>
-                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4">
                   <div class="card border-0 shadow course-card">
                     <div class="p-3">
                       <picture>
@@ -508,7 +451,6 @@ header.masthead {
                       <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
                     </div>
                   </div>
-                </div>
               </div>
           </div>
         </div>
@@ -527,7 +469,6 @@ header.masthead {
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionCourse">
           <div class="card-body">
                <div class="scrolling-wrapper row flex-row flex-nowrap text-center courses-list">
-                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4">
                   <div class="card border-0 shadow course-card">
                     <div class="p-3">
                       <picture>
@@ -549,8 +490,6 @@ header.masthead {
                       <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
                     </div>
                   </div>
-                </div>
-                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4">
                   <div class="card border-0 shadow course-card">
                     <div class="p-3">
                       <picture>
@@ -572,8 +511,6 @@ header.masthead {
                       <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
                     </div>
                   </div>
-                </div>
-                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4">
                   <div class="card border-0 shadow course-card">
                     <div class="p-3">
                       <picture>
@@ -595,7 +532,6 @@ header.masthead {
                       <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
                     </div>
                   </div>
-                </div>
               </div>
           </div>
         </div>
@@ -614,7 +550,6 @@ header.masthead {
         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionCourse">
           <div class="card-body">
              <div class="scrolling-wrapper row flex-row flex-nowrap text-center courses-list">
-                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4">
                   <div class="card border-0 shadow course-card">
                     <div class="p-3">
                       <picture>
@@ -636,8 +571,6 @@ header.masthead {
                       <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
                     </div>
                   </div>
-                </div>
-                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4">
                   <div class="card border-0 shadow course-card">
                     <div class="p-3">
                       <picture>
@@ -659,8 +592,6 @@ header.masthead {
                       <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
                     </div>
                   </div>
-                </div>
-                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4">
                   <div class="card border-0 shadow course-card">
                     <div class="p-3">
                       <picture>
@@ -682,7 +613,6 @@ header.masthead {
                       <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
                     </div>
                   </div>
-                </div>
               </div>
           </div>
         </div>
@@ -701,7 +631,6 @@ header.masthead {
         <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionCourse">
           <div class="card-body">
              <div class="scrolling-wrapper row flex-row flex-nowrap text-center courses-list">
-                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4">
                   <div class="card border-0 shadow course-card">
                     <div class="p-3">
                       <picture>
@@ -723,8 +652,6 @@ header.masthead {
                       <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
                     </div>
                   </div>
-                </div>
-                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4">
                   <div class="card border-0 shadow course-card">
                     <div class="p-3">
                       <picture>
@@ -746,7 +673,6 @@ header.masthead {
                       <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
                     </div>
                   </div>
-                </div>
               </div>
           </div>
         </div>
@@ -765,7 +691,6 @@ header.masthead {
         <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionCourse">
           <div class="card-body">
             <div class="scrolling-wrapper row flex-row flex-nowrap text-center courses-list">
-                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4">
                   <div class="card border-0 shadow course-card">
                     <div class="p-3">
                       <picture>
@@ -787,8 +712,6 @@ header.masthead {
                       <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
                     </div>
                   </div>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4">
                   <div class="card border-0 shadow course-card">
                     <div class="p-3">
                       <picture>
@@ -810,7 +733,6 @@ header.masthead {
                       <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
                     </div>
                   </div>
-                </div>
               </div>
           </div>
         </div>
@@ -829,7 +751,6 @@ header.masthead {
         <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionCourse">
           <div class="card-body">
              <div class="scrolling-wrapper row flex-row flex-nowrap text-center courses-list">
-                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4">
                   <div class="card border-0 shadow course-card">
                     <div class="p-3">
                       <picture>
@@ -851,8 +772,6 @@ header.masthead {
                       <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
                     </div>
                   </div>
-                </div>
-                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4">
                   <div class="card border-0 shadow course-card">
                     <div class="p-3">
                       <picture>
@@ -874,7 +793,6 @@ header.masthead {
                       <p class="m-0"><img src="assets/icon/book-open.svg" alt="Classes"> 8 Classes/Month</p>
                     </div>
                   </div>
-                </div>
               </div>
           </div>
         </div>
@@ -884,7 +802,7 @@ header.masthead {
 </section>
     
 <!--Our Instructors-->
-<section class="py-5 bg-dark">
+<section class="ourInstructors py-5 bg-dark">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -902,6 +820,34 @@ header.masthead {
               </div>
             </a>
             </div>
+            <div class="card border-0 mb-3">
+               <a href="#">
+               <img src="assets/teachers-img/Jatin-teacher.jpg" alt="Jatin Thakkar" class="card-img-top">
+              <div class="card-img-overlay d-flex flex-column justify-content-end text-center">
+                <h5 class="card-title text-white font-weight-bold mb-1">Jatin Thakkar</h5>
+                 <p class="card-text text-white">Chess</p>
+              </div>
+                </a>
+            </div>
+            <div class="card border-0 mb-3">
+             <a href="#">
+               <img src="assets/teachers-img/Nistha-Mishra-teacher.jpg" alt="Nistha Mishra Teacher" class="card-img-top">
+              <div class="card-img-overlay d-flex flex-column justify-content-end text-center">
+                <h5 class="card-title text-white font-weight-bold mb-1">Nistha Mishra</h5>
+                <p class="card-text text-white">Vocals</p>
+              </div>
+             </a>
+            </div>
+            <div class="card border-0 mb-3">
+             <a href="#">
+               <img src="assets/teachers-img/kanika-teacher.jpg" alt="Kanika" class="card-img-top">
+              <div class="card-img-overlay d-flex flex-column justify-content-end text-center">
+                <h5 class="card-title text-white font-weight-bold mb-1">Kanika</h5>
+                <p class="card-text text-white">French</p>
+              </div>
+             </a>
+            </div>
+            <div class="d-none d-sm-block">
             <div class="card border-0 mb-3">
               <a href="#">
                <img src="assets/teachers-img/Madhuri-Bhowmick-teacher.jpg" alt="Madhuri Bhowmick" class="card-img-top">
@@ -949,30 +895,12 @@ header.masthead {
             </div>
             <div class="card border-0 mb-3">
              <a href="#">
-               <img src="assets/teachers-img/Nistha-Mishra-teacher.jpg" alt="Nistha Mishra Teacher" class="card-img-top">
-              <div class="card-img-overlay d-flex flex-column justify-content-end text-center">
-                <h5 class="card-title text-white font-weight-bold mb-1">Nistha Mishra</h5>
-                <p class="card-text text-white">Vocals</p>
-              </div>
-             </a>
-            </div>
-            <div class="card border-0 mb-3">
-             <a href="#">
                <img src="assets/teachers-img/Maria-teacher.jpg" alt="Maria" class="card-img-top">
               <div class="card-img-overlay d-flex flex-column justify-content-end text-center">
                 <h5 class="card-title text-white font-weight-bold mb-1">Maria</h5>
                 <p class="card-text text-white">French</p>
               </div>
              </a>
-            </div>
-            <div class="card border-0 mb-3">
-               <a href="#">
-               <img src="assets/teachers-img/Jatin-teacher.jpg" alt="Jatin Thakkar" class="card-img-top">
-              <div class="card-img-overlay d-flex flex-column justify-content-end text-center">
-                <h5 class="card-title text-white font-weight-bold mb-1">Jatin Thakkar</h5>
-                 <p class="card-text text-white">Chess</p>
-              </div>
-                </a>
             </div>
             <div class="card border-0 mb-3">
              <a href="#">
@@ -998,15 +926,6 @@ header.masthead {
               <div class="card-img-overlay d-flex flex-column justify-content-end text-center">
                 <h5 class="card-title text-white font-weight-bold mb-1">Ashish Kumar</h5>
                 <p class="card-text text-white">Chess</p>
-              </div>
-             </a>
-            </div>
-            <div class="card border-0 mb-3">
-             <a href="#">
-               <img src="assets/teachers-img/kanika-teacher.jpg" alt="Kanika" class="card-img-top">
-              <div class="card-img-overlay d-flex flex-column justify-content-end text-center">
-                <h5 class="card-title text-white font-weight-bold mb-1">Kanika</h5>
-                <p class="card-text text-white">French</p>
               </div>
              </a>
             </div>
@@ -1073,9 +992,10 @@ header.masthead {
               </div>
              </a>
             </div>
+            </div>
         </div>
         <div class="text-center d-block d-sm-none">
-            <a href="#" class="text-white">More Teachers <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="15px"><path fill="#fff" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg> </a>
+            <a href="#" onclick="replaceClass()" class="text-white">More Teachers <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="15px"><path fill="#fff" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg> </a>
         </div>
     </div>
 </section>
@@ -1088,7 +1008,130 @@ header.masthead {
     </div>
   </footer>
 </main>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> 
+
+<!--Add CTA-->
+    
+<section class="py-3 bg-light fixed-bottom d-block d-sm-none">
+  <div class="container">
+    <a href="#" data-toggle="modal" data-target="#bookTrialModal" id="openForm" data-whatever="@fat" class="btn btn-success btn-block btn-lg font-weight-bold">Book A Trial Class</a>
+  </div>  
+</section>
+    
+<div class="modal fade" id="bookTrialModal" tabindex="-1" role="dialog" aria-labelledby="bookTrialModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title font-weight-bold" id="bookTrialModalLabel">Book A Trial Class</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="needs-validation" novalidate>
+          <div id="short-from">
+          <div class="form-group">
+            <label for="validationCustom08" class="sr-only">Which category are you interetesd in?</label>
+             <select class="custom-select badge-pill" id="validationCustom08" required>
+                <option selected disabled value="">Which category are you interetesd in?</option>
+                 <option value="chess">Chess</option>
+                 <option value="coding">Coding</option>
+                 <option value="creative-arts">Creative Arts</option>
+                 <option value="dance">Dance</option>
+                 <option value="french">French</option>
+                 <option value="maths">Maths</option>
+                 <option value="music">Music</option>
+                 <option value="theatre">Theatre</option>
+                 <option value="yoga">Yoga</option>
+              </select>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+          </div>
+          <div class="form-group">
+             <label for="validationCustom09" class="sr-only">Choose course?</label>
+             <select class="custom-select badge-pill" id="validationCustom09" required>
+                <option selected disabled value="">Choose course?</option>
+                 <option value="beginner">Beginner</option>
+                 <option value="expert">Expert</option>
+                 <option value="intermediate">Intermediate</option>
+              </select>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+          </div>
+          </div>
+          <div id="fullForm">
+          <div class="form-group">
+              <label for="validationCustom01" class="sr-only">Your Name</label>
+              <input type="text" class="form-control badge-pill" id="validationCustom01" placeholder="Your Name (required)" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please provide your name
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="validationCustom02" class="sr-only">Your Email</label>
+              <input type="text" class="form-control badge-pill" id="validationCustom02" placeholder="Your Email (required)" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+             <div class="invalid-feedback">
+                Please provide your email
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="validationCustom03" class="sr-only">Mobile</label>
+              <input type="text" class="form-control badge-pill" id="validationCustom03" placeholder="Mobile (required)" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please provide your mobile no
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="validationCustom04" class="sr-only">Child Name</label>
+              <input type="text" class="form-control badge-pill" id="validationCustom04" placeholder="Child Name" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please provide child your name
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="validationCustom05" class="sr-only">When would you want trial class</label>
+              <input type="text" class="form-control badge-pill" id="validationCustom05" placeholder="When would you want trial class" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please fill
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="validationTextarea" class="sr-only"> Any Prior Knowledge of This Activity</label>
+               <textarea class="form-control rounded" id="validationTextarea" rows="3" placeholder="Any Prior Knowledge of This Activity"></textarea>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please fill
+              </div>
+          </div>
+          <div class="form-group m-0">
+           <button type="submit" class="btn btn-success btn-block font-weight-bold">Submit</button>
+          </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 <script src="js/bootstrap.bundle.js"></script>
 <script>
 // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -1110,5 +1153,23 @@ header.masthead {
   }, false);
 })();
 </script>
+    
+<script>
+$(document).ready(function () {
+
+     $("#fullForm").addClass("hide");
+    $("#validationCustom09").change((e)=>{
+        alert(e.target.value);
+        let selectValue = e.target.value;
+        if(selectValue !="" && $("#validationCustom08").value() !="")){
+            $("#fullForm").show();
+           }else{
+               $("#fullForm").addClass("hide");
+           }
+    })
+    
+});
+</script>  
+
 </body>
 </html>

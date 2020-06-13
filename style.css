@@ -163,6 +163,46 @@ p.course-review-top a {
 .subscription-list .all-tx {
     font-size: 8px;
 }
+
+.scrolling-wrapper{
+	overflow-x: auto;
+}
+.course-card {
+    background: #FFFFFF;
+    border-radius: 19px;
+    width: 32%;
+    min-width: 320px;
+    margin-right: 10px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+#accordionCourse .card-header {
+    border-bottom: 2px solid #dfdfdf;
+}
+.all-course .card .card-footer {
+    border-radius: 0 0 19px 19px;
+}
+    
+.courses-list .card .card-body h3 {
+    color: #FF9800;
+    font-size: 1.4em;
+}
+.courses-list .card .card-body .btn-course{
+    background: #FF9800;
+    box-shadow: 0 2px 25px 0 rgba(255, 152, 0, 0.19);
+    border: #FF9800;
+ }
+.btn-course {
+    border-radius: 35.5px;
+    padding: .8em 2em;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+}
+.btn-course:hover {
+    color: #fff;
+}
+    
 .btn-success {
     color: #fff;
     background-color: #04BF74;
@@ -171,7 +211,6 @@ p.course-review-top a {
 footer {
     background: #444444;
 }
-
 
 
 /* RESPONSIVE CSS
