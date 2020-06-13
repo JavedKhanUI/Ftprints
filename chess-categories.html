@@ -757,7 +757,7 @@
   </section>
   <section class="py-3 bg-light fixed-bottom d-block d-sm-none">
       <div class="container">
-        <a href="#bookTrail" class="btn btn-success btn-block btn-lg font-weight-bold">Book A Trial Class</a>
+        <a href="#bookTrail" class="btn btn-success btn-block btn-lg font-weight-bold scrollLink">Book A Trial Class</a>
       </div>  
   </section>
   <!-- FOOTER -->
@@ -791,7 +791,7 @@
 })();
 </script>
 <script>
-    $(document).on('click', 'a[href^="#"]', function (event) {
+$(document).on('click', 'a.scrollLink', function (event) {
     event.preventDefault();
 
     $('html, body').animate({
