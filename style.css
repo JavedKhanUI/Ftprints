@@ -87,7 +87,7 @@ p.course-review-top a {
     padding: .5em 0em;
     border-bottom: 2px solid rgba(0, 0, 0, 0.125);
 }
-
+.text-yellow {color: #fba505;}
 .sub-sign {
     border-color: #04BF74;
     background: #04BF74;
