@@ -105,6 +105,13 @@ p.course-review-top a {
     height: 90px;
     border-radius: 50%;
 }
+
+.teacherFullProfile ul li img {
+    position: absolute;
+    left: 0;
+    top: 15px;
+}
+
 .trial-class-form .card-header {
     background: #FBA505;
     border-radius: 16px 16px 0 0;
