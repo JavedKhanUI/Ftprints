@@ -189,12 +189,12 @@ p.course-review-top a {
 .all-course .card .card-footer {
     border-radius: 0 0 19px 19px;
 }
-    
-.courses-list .card .card-body h3 {
+
+.courses-list .card .card-body h3, .courseTitle2 {
     color: #FF9800;
     font-size: 1.4em;
 }
-.courses-list .card .card-body .btn-course{
+.btn-course{
     background: #FF9800;
     box-shadow: 0 2px 25px 0 rgba(255, 152, 0, 0.19);
     border: #FF9800;
@@ -225,6 +225,19 @@ p.course-review-top a {
     background-color: #04BF74;
     border-color: #04BF74;
 }
+
+.teacherFullProfile {
+    background: url(assets/img/bg-green.jpg) no-repeat center;
+    background-size: cover;
+    background-position-y: -33em;
+}
+#more {display: none;}
+
+.coursesOffersBy p.card-text {
+    font-size: 14px;
+    line-height: 24px;
+}
+
 
 footer {
     background: #444444;
@@ -258,6 +271,7 @@ footer {
 @media (max-width: 575.98px) {
     .learning h3 {font-size: 1.8em;}
     .course-card { min-width: 280px;}
+    .teacherFullProfile { background-position-y: -53em;}
 }
 
 /*Small devices (landscape phones, less than 768px)*/
