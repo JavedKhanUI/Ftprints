@@ -114,7 +114,7 @@ p.course-review-top a {
 
 .trial-class-form .card-header {
     background: #FBA505;
-    border-radius: 16px 16px 0 0;
+    border-radius: 8px 8px 0 0;
     color: #fff;
 }
 .trial-class-form .card-header h4 {
@@ -229,7 +229,7 @@ p.course-review-top a {
 .teacherFullProfile {
     background: url(assets/img/bg-green.jpg) no-repeat center;
     background-size: cover;
-    background-position-y: -33em;
+    background-position-y: -24em;
 }
 .show-read-more .more-text{
     display: none;
@@ -273,7 +273,7 @@ footer {
 @media (max-width: 575.98px) {
     .learning h3 {font-size: 1.8em;}
     .course-card { min-width: 280px;}
-    .teacherFullProfile { background-position-y: -53em;}
+    .teacherFullProfile {background-position-y: -38em;}
 }
 
 /*Small devices (landscape phones, less than 768px)*/
