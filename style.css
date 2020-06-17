@@ -243,11 +243,18 @@ p.course-review-top a {
     line-height: 24px;
 }
 
+footer {background: #444444;}
 
-footer {
-    background: #444444;
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+    color: #ffffff;
+    background-color: #fca509;
+    border-color: #fca509;
+    z-index: 9999;
 }
-
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
@@ -277,6 +284,7 @@ footer {
     .learning h3 {font-size: 1.8em;}
     .course-card { min-width: 280px;}
     .teacherFullProfile {background-position-y: -38em;}
+    .back-to-top {bottom: 95px;}
 }
 
 /*Small devices (landscape phones, less than 768px)*/
