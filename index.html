@@ -8,7 +8,8 @@
 <meta name="generator" content="Footprints">
 <title>Online Live classes by Footprints Bringing learning to your home</title>
 <link rel="canonical" href="#">
-
+<link rel="amphtml" href="amp/index-amp.html">
+    
 <script type="application/ld+json">
 {
 "@context": "http://schema.org",
@@ -129,7 +130,22 @@ header.masthead {padding-top: 5rem;}
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#">Online Classes</a> </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Online Classes
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="chess-categories.html">Chess</a>
+              <a class="dropdown-item" href="#">Coding</a>
+              <a class="dropdown-item" href="#">Creative Arts</a>
+              <a class="dropdown-item" href="#">Dance</a>
+              <a class="dropdown-item" href="#">French</a>
+              <a class="dropdown-item" href="#">Maths</a>
+              <a class="dropdown-item" href="#">Music</a>
+              <a class="dropdown-item" href="#">Theatre</a>
+              <a class="dropdown-item" href="#">Yoga</a>
+            </div>
+          </li>
           <li class="nav-item"> <a class="nav-link" href="#">Policies</a></li>
         </ul>
       </div>
@@ -337,7 +353,7 @@ header.masthead {padding-top: 5rem;}
                       </picture>
                     </div>
                     <div class="card-header bg-white d-flex justify-content-between bg-white border-bottom-0">
-                      <p class="m-0"><img src="assets/icon/user.svg" alt="user"> Jatin Thakkar</p>
+                      <p class="m-0"><a href="teacher-jatin-thakkar.html" class="text-dark"><img src="assets/icon/user.svg" alt="user"> Jatin Thakkar</a></p>
                       <!-- <p class="m-0"><img src="assets/icon/calendar.svg" alt="Uploaded Dated"> 18-05-2020</p>-->
                     </div>
                     <div class="card-body pt-2">
@@ -1003,12 +1019,13 @@ header.masthead {padding-top: 5rem;}
   <!-- FOOTER -->
   <footer class="py-4">
     <div class="container text-center">
-        <p class="float-right text-white m-0"><a href="#" class="text-white">Back to top</a></p>
         <p class="text-white m-0">&copy; Copyright 2020 Footprints Childcare Pvt Ltd</p>
     </div>
   </footer>
 </main>
 
+<a id="back-to-top" href="#" class="btn btn-lg back-to-top" role="button"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-up" class="svg-inline--fa fa-chevron-up fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="15px"><path fill="currentColor" d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z"></path></svg></a>
+    
 <!--Add CTA-->
     
 <section class="py-3 bg-light fixed-bottom d-block d-sm-none">
@@ -1182,6 +1199,25 @@ header.masthead {padding-top: 5rem;}
             }
         });
     }).change();
+});
+</script>
+    
+<script>
+    $(document).ready(function(){
+	$(window).scroll(function () {
+			if ($(this).scrollTop() > 50) {
+				$('#back-to-top').fadeIn();
+			} else {
+				$('#back-to-top').fadeOut();
+			}
+		});
+		// scroll body to 0px on click
+		$('#back-to-top').click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 400);
+			return false;
+		});
 });
 </script>
 
