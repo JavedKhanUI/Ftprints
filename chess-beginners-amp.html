@@ -279,6 +279,20 @@ textarea.form-control{height:auto;}
 .font-weight-bold{font-weight:700;}
 .text-white{color:#fff;}
 .text-muted{color:#6c757d;}
+select{margin:0;font-family:inherit;font-size:inherit;line-height:inherit;}
+select{text-transform:none;}
+select{word-wrap:normal;}
+.custom-select{display:inline-block;width:100%;height:calc(1.5em + 0.75rem + 2px);padding:0.375rem 1.75rem 0.375rem 0.75rem;font-size:1rem;font-weight:400;line-height:1.5;color:#495057;vertical-align:middle;background:#fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;border:1px solid #ced4da;border-radius:0.25rem;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+.custom-select:focus{border-color:#80bdff;outline:0;box-shadow:0 0 0 0.2rem rgba(0, 123, 255, 0.25);}
+.custom-select:disabled{color:#6c757d;background-color:#e9ecef;}
+.custom-select::-ms-expand{display:none;}
+.custom-select:-moz-focusring{color:transparent;text-shadow:0 0 0 #495057;}
+.custom-select{transition:background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;}
+@media (prefers-reduced-motion: reduce){
+.custom-select{transition:none;}
+}
+.badge-pill{padding-right:0.6em;padding-left:0.6em;border-radius:10rem;}
+    
 @media print{
 *,*::before,*::after{text-shadow:none;box-shadow:none;}
 a:not(.btn){text-decoration:underline;}
@@ -600,7 +614,7 @@ footer {
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="trial-class-form mb-4">
+                <div class="trial-class-form mb-4" id="bookTrail"> 
                     <div class="card border-0 shadow">
                         <div class="card-header text-center">
                             <h4 class="m-0 font-weight-bold">BOOK A TRIAL CLASS</h4>
@@ -647,9 +661,15 @@ footer {
                                     Please provide child your name
                                   </div>
                               </div>
-                              <div class="form-group">
-                                  <label for="validationCustom05" class="sr-only">When would you want trial class</label>
-                                  <input type="text" class="form-control badge-pill" id="validationCustom05" placeholder="When would you want trial class" required>
+                               <div class="form-group">
+                                  <label for="validationStudentAge" class="sr-only">Select Age of Student</label>
+                                  <select class="custom-select badge-pill" id="validationStudentAge" required="">
+                                    <option selected="" disabled="" value="">Select Age of Student</option>
+                                     <option value="5-8-years">05-08 years</option>
+                                     <option value="8-12-years">08-12 years</option>
+                                     <option value="12-18-years">12-18 years</option>
+                                     <option value="18-years">18+ years</option>
+                                  </select>
                                   <div class="valid-feedback">
                                     Looks good!
                                   </div>
@@ -657,9 +677,17 @@ footer {
                                     Please fill
                                   </div>
                               </div>
-                              <div class="form-group">
-                                  <label for="exampleFormControlTextarea1" class="sr-only"> Any Prior Knowledge of This Activity</label>
-                                   <textarea class="form-control rounded" id="exampleFormControlTextarea1" rows="3" placeholder="Any Prior Knowledge of This Activity"></textarea>
+                               <div class="form-group">
+                                  <label for="validationClassTime" class="sr-only">Select Trial Class Time Slot</label>
+                                  <select class="custom-select badge-pill" id="validationClassTime" required="">
+                                    <option selected="" disabled="" value="">Select Trial Class Time Slot</option>
+                                     <option value="Monday">Monday 4:00PM</option>
+                                     <option value="Tuesday">Tuesday 5:30PM</option>
+                                     <option value="Wednesday">Wednesday 6:00PM</option>
+                                     <option value="Thursday">Thursday 6:30PM</option>
+                                     <option value="Friday">Friday 7:00PM</option>
+                                     <option value="Saturday">Saturday 7:30PM</option>
+                                  </select>
                                   <div class="valid-feedback">
                                     Looks good!
                                   </div>
@@ -874,7 +902,7 @@ footer {
   </section>
   <section class="py-3 bg-light fixed-bottom d-block d-sm-none">
       <div class="container">
-        <a href="#" class="btn btn-success btn-block btn-lg font-weight-bold">Book A Trial Class</a>
+        <a href="#bookTrail" class="btn btn-success btn-block btn-lg font-weight-bold">Book A Trial Class</a>
       </div>  
   </section>
   <!-- FOOTER -->
