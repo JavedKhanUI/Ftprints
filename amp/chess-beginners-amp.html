@@ -2,7 +2,7 @@
 <html ⚡ i-amphtml-layout i-amphtml-no-boilerplate transformed="google;v=1">
 <head>
 <meta charset="utf-8">
-<title>Online Footprints</title>
+<title>Chess Beginners</title>
 
 <!--Theme Color-->
 <meta name="msapplication-TileColor" content="#ffffff">
@@ -17,28 +17,27 @@
 
 <style amp-runtime i-amphtml-version="011905222334000">html {overflow-x: hidden}</style>
     
-<!--Script-->
-<!--<link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">-->
 <script async src="https://cdn.ampproject.org/v0.js"></script>
-    
-<!--
-<link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-form-0.1.js">
-<link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-youtube-0.1.js">
-<link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-accordion-0.1.js">
--->
 
 <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script> 
 <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+<!--  Import amp-position-observer extension -->
+<script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+
+<!--  Import amp-animation extension -->
+<script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+    
+<script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async=""></script>
     
 <!-- Favicon-->
-<link href="assets/favicon/favicon.ico" rel="icon" type="image/x-icon" />
+<link href="../assets/favicon/favicon.ico" rel="icon" type="image/x-icon" />
     
 <!--Google Fonts-->
 <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com/css2?family=Montserrat:wght@400;500;700;800&family=Quicksand:wght@400;500;700&display=swap" crossorigin>
     
 <!--Canonical-->
-<link rel="canonical" href="#">
+<link rel="canonical" href="./chess-beginners.html">
     
 <script type="application/ld+json">
       {
@@ -303,6 +302,29 @@ body{min-width:992px;}
 .container{min-width:992px;}
 .navbar{display:none;}
 }
+
+.dropdown{position:relative;}
+.dropdown-toggle{white-space:nowrap;}
+.dropdown-toggle::after{display:inline-block;margin-left:0.255em;vertical-align:0.255em;content:"";border-top:0.3em solid;border-right:0.3em solid transparent;border-bottom:0;border-left:0.3em solid transparent;}
+.dropdown-toggle:empty::after{margin-left:0;}
+.dropdown-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:10rem;padding:0.5rem 0;margin:0.125rem 0 0;font-size:1rem;color:#212529;text-align:left;list-style:none;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0, 0, 0, 0.15);border-radius:0.25rem;}
+.dropdown-item{display:block;width:100%;padding:0.25rem 1.5rem;clear:both;font-weight:400;color:#212529;text-align:inherit;white-space:nowrap;background-color:transparent;border:0;}
+.dropdown-item:hover,.dropdown-item:focus{color:#16181b;text-decoration:none;background-color:#f8f9fa;}
+.dropdown-item:active{color:#fff;text-decoration:none;background-color:#007bff;}
+.dropdown-item:disabled{color:#6c757d;pointer-events:none;background-color:transparent;}
+.nav-link{display:block;padding:0.5rem 1rem;}
+.nav-link:hover,.nav-link:focus{text-decoration:none;}
+.navbar-nav .nav-link{padding-right:0;padding-left:0;}
+.navbar-nav .dropdown-menu{position:static;float:none;}
+@media (min-width: 768px){
+.navbar-expand-md .navbar-nav .dropdown-menu{position:absolute;}
+.navbar-expand-md .navbar-nav .nav-link{padding-right:0.5rem;padding-left:0.5rem;}
+}
+.navbar-light .navbar-nav .nav-link{color:rgba(0, 0, 0, 0.5);}
+.navbar-light .navbar-nav .nav-link:hover,.navbar-light .navbar-nav .nav-link:focus{color:rgba(0, 0, 0, 0.7);}
+    
+.nav-item.dropdown:hover .dropdown-menu { display: block;}
+    
 /*Custom Style*/
     
 body {
@@ -461,28 +483,160 @@ footer {
     color: #22c1e0;
     font-weight: 600;
 }
+.scrollToTop { color: #fff; font-size: 1.8em; box-shadow: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12); width: 50px; height: 50px; border-radius: 15%; border: none; outline: none; background: #fca509; z-index: 9999; bottom: 10px; right: 25px; position: fixed; opacity: 0; visibility: hidden; }
+
+#header-sidebar .closeslide {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+#header-sidebar nav ul { list-style: none; padding: 0; margin-top: 30px; }
+    
+#header-sidebar nav ul li {
+    padding: 10px 30px;
+    color: #565656;
+    background: #fff;
+}
+#header-sidebar nav ul li a { color: #444; font-weight: 500;}
+    
+#header-sidebar .ampstart-sidebar-nav header {
+    background: #fff;
+    border: 0;
+    font-weight: 600;
+    padding: 0;
+}
+#header-sidebar .ampstart-sidebar-nav .ampstart-dropdown-items {
+    margin-top: 0;
+}
+#header-sidebar .ampstart-sidebar-nav .ampstart-dropdown-items li {
+    padding: 0;
+}
+#header-sidebar .ampstart-sidebar-nav .ampstart-dropdown-items li a {
+    padding: 8px 30px 8px 13px;
+    color: #444;
+}
+@media only screen and (min-width:320px) and (max-width:767px){
+.scrollToTop { bottom: 90px;}   
+}   
 
 </style>
     
-<link rel="preload" as="image" href="assets/img/chess-bignner-xs.jpg" media="(max-width: 415px)">
-<link rel="preload" as="image" href="assets/img/chess-bignner-xl.jpg" media="(min-width: 416px)">
+<link rel="preload" as="image" href="../assets/img/chess-bignner-xs.jpg" media="(max-width: 415px)">
+<link rel="preload" as="image" href="../assets/img/chess-bignner-xl.jpg" media="(min-width: 416px)">
     
 </head>
 <body>
+<div class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start" layout="nodisplay">
+    </amp-position-observer>
+</div>
+
+ <!--
+    We use 2 `amp-animation` elements to trigger the visibility of the button. The first one is for making the button visible...
+  -->
+  <amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+  <!-- ... and the second one is for adding the button.-->
+  <amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>    
+
 <header>
   <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white py-4 shadow">
-    <div class="container"> <a class="navbar-brand" href="#"><amp-img src="assets/img/Footprints-Logo.svg" alt="Footprints Logo" width="200" height="25" layout="fixed"></amp-img></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#">Online Classes</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#">Policies</a></li>
-        </ul>
-      </div>
+    <div class="container"> <a class="navbar-brand" href="#"><amp-img src="../assets/img/Footprints-Logo.svg" alt="Footprints Logo" width="200" height="25" layout="fixed"></amp-img></a>
+      <button class="navbar-toggler ampstart-navbar-trigger" role="button" aria-label="open sidebar" on="tap:header-sidebar.toggle" tabindex="0">☰</button>
+        
+       <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
+               <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Online Classes
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="chess-categories.html">Chess</a>
+                      <a class="dropdown-item" href="#">Coding</a>
+                      <a class="dropdown-item" href="#">Creative Arts</a>
+                      <a class="dropdown-item" href="#">Dance</a>
+                      <a class="dropdown-item" href="#">French</a>
+                      <a class="dropdown-item" href="#">Maths</a>
+                      <a class="dropdown-item" href="#">Music</a>
+                      <a class="dropdown-item" href="#">Theatre</a>
+                      <a class="dropdown-item" href="#">Yoga</a>
+                    </div>
+                  </li>
+              <li class="nav-item"> <a class="nav-link" href="#">Policies</a></li>
+            </ul>
+          </div>
     </div>
   </nav>
 </header>
+    
+
+<!-- Start Sidebar -->
+<amp-sidebar id="header-sidebar" class="ampstart-sidebar bg-white" layout="nodisplay">
+  <div class="flex justify-start items-center ampstart-sidebar-header closeslide">
+    <div role="button" aria-label="close sidebar" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger items-start">✕</div>
+  </div>
+  <nav class="ampstart-sidebar-nav ampstart-nav">
+    <ul class="list-reset m0 p0 ampstart-label">
+          <li class="ampstart-nav-item"><a class="ampstart-nav-link" href="#">Home</a></li>
+          <li class="ampstart-nav-item ampstart-nav-dropdown relative ">
+            <!-- Start Dropdown-inline -->
+            <amp-accordion layout="container" disable-session-states="" class="ampstart-dropdown">
+              <section expanded="">
+                <header>Online Classes</header>
+                <ul class="ampstart-dropdown-items">
+                    <li class="nav-item"><a href="#" class="nav-link">Chess</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Coding</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Creative Arts</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">French</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Maths</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Music</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Theatre</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Yoga</a></li>
+                </ul>
+              </section>
+            </amp-accordion>
+            <!-- End Dropdown-inline -->
+          </li>
+          <li class="ampstart-nav-item"><a class="ampstart-nav-link" href="#">Policies</a></li>
+     </ul>
+  </nav>
+</amp-sidebar>
+<!-- End Sidebar -->
 <main role="main">
   <section class="top-padding pb-4">
     <div class="container">
@@ -492,11 +646,11 @@ footer {
                     <p class="category mb-2"><a href="#" class="text-muted">Chess Courses</a></p>
                     <h1 class="course-title font-weight-bold">Chess – Beginners</h1>
                      <div class="course-review-top mb-3">
-                             <amp-img src="assets/icon/star-solid.svg" alt="full-star" width="25" height="25" layout="fixed"></amp-img>
-                             <amp-img src="assets/icon/star-solid.svg" alt="full-star" width="25" height="25" layout="fixed"></amp-img>
-                             <amp-img src="assets/icon/star-solid.svg" alt="full-star" width="25" height="25" layout="fixed"></amp-img>
-                             <amp-img src="assets/icon/star-solid.svg" alt="full-star" width="25" height="25" layout="fixed"></amp-img>
-                             <amp-img src="assets/icon/star-half-alt-solid.svg" alt="half-star" width="25" height="25" layout="fixed"></amp-img>
+                             <amp-img src="../assets/icon/star-solid.svg" alt="full-star" width="25" height="25" layout="fixed"></amp-img>
+                             <amp-img src="../assets/icon/star-solid.svg" alt="full-star" width="25" height="25" layout="fixed"></amp-img>
+                             <amp-img src="../assets/icon/star-solid.svg" alt="full-star" width="25" height="25" layout="fixed"></amp-img>
+                             <amp-img src="../assets/icon/star-solid.svg" alt="full-star" width="25" height="25" layout="fixed"></amp-img>
+                             <amp-img src="../assets/icon/star-half-alt-solid.svg" alt="half-star" width="25" height="25" layout="fixed"></amp-img>
                             <a href="#bottom-review" class="font-weight-bold"> 4.5 stars - 12 Review</a>
                      </div>
                     <p class="course-details">If you want to learn chess, then this is the course for you. In this course students will learn the rules of the game, the opening and a few checkmates with the best chess coaches.</p>
@@ -508,12 +662,12 @@ footer {
                 <div class="course-img">
                   <amp-img width="345" height="230"
                     alt="chess-bignner" layout="responsive"
-                    src="assets/img/chess-bignner-xs.jpg"
+                    src="../assets/img/chess-bignner-xs.jpg"
                     media="(max-width: 415px)">
                 </amp-img>
                 <amp-img height="487"
                     alt="chess-bignner" layout="fixed-height"
-                    src="assets/img/chess-bignner-xl.jpg"
+                    src="../assets/img/chess-bignner-xl.jpg"
                     media="(min-width: 416px)">
                  </amp-img>
                 </div>
@@ -559,54 +713,54 @@ footer {
                     <amp-accordion class="sample"
                       expand-single-section animate> 
                       <section expanded>
-                        <h4>Class Experience <amp-img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15" height="15" layout="fixed"></amp-img></h4>
+                        <h4>Class Experience <amp-img src="../assets/icon/chevron-down-solid.svg" alt="down icon" width="15" height="15" layout="fixed"></amp-img></h4>
                         <p class="card-body p-2"> If you want to learn chess, then this is the course for you. In this course students will learn the rules of the game, the opening and a few checkmates with the best chess coaches. Our class will begin with a short example of what a...</p>
                       </section>
                       <section>
-                        <h4>Who is this course for? <amp-img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15" height="15" layout="fixed"></amp-img></h4>
+                        <h4>Who is this course for? <amp-img src="../assets/icon/chevron-down-solid.svg" alt="down icon" width="15" height="15" layout="fixed"></amp-img></h4>
                         <p class="card-body p-2">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id, vestibulum aliqua vivamus luctus eu rhoncus ut, sodales id. Velit lacus, fermentum neque et sagittis, ac venenatis volutpat, dolore neque feugiat proin fermentum odio,
                           odio arcu in eu wisi. </p>
                       </section>
                       <section>
-                        <h4>What will you learn? <amp-img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15" height="15" layout="fixed"></amp-img></h4>
+                        <h4>What will you learn? <amp-img src="../assets/icon/chevron-down-solid.svg" alt="down icon" width="15" height="15" layout="fixed"></amp-img></h4>
                         <div class="card-body p-2">
                             <ul class="list-group list-group-flush">
-                              <li class="list-group-item px-1"><amp-img src="assets/icon/check-circle.svg" alt="check" width="18" height="18" layout="fixed"></amp-img>&nbsp;Introduction to Chess and Basics</li>
-                              <li class="list-group-item px-1"><amp-img src="assets/icon/check-circle.svg" alt="check" width="18" height="18" layout="fixed"></amp-img>&nbsp;Chess concepts like Pin & Skewer, Double Attack etc</li>
-                              <li class="list-group-item px-1"><amp-img src="assets/icon/check-circle.svg" alt="check" width="18" height="18" layout="fixed"></amp-img>&nbsp;Process of Chess calculation</li>
-                              <li class="list-group-item px-1"><amp-img src="assets/icon/check-circle.svg" alt="check" width="18" height="18" layout="fixed"></amp-img>&nbsp;Logical decision making</li>
-                              <li class="list-group-item px-1"><amp-img src="assets/icon/check-circle.svg" alt="check" width="18" height="18" layout="fixed"></amp-img>&nbsp;Finding the best move</li>
-                              <li class="list-group-item px-1"><amp-img src="assets/icon/check-circle.svg" alt="check" width="18" height="18" layout="fixed"></amp-img>&nbsp;Delivering checkmates</li>
+                              <li class="list-group-item px-1"><amp-img src="../assets/icon/check-circle.svg" alt="check" width="18" height="18" layout="fixed"></amp-img>&nbsp;Introduction to Chess and Basics</li>
+                              <li class="list-group-item px-1"><amp-img src="../assets/icon/check-circle.svg" alt="check" width="18" height="18" layout="fixed"></amp-img>&nbsp;Chess concepts like Pin & Skewer, Double Attack etc</li>
+                              <li class="list-group-item px-1"><amp-img src="../assets/icon/check-circle.svg" alt="check" width="18" height="18" layout="fixed"></amp-img>&nbsp;Process of Chess calculation</li>
+                              <li class="list-group-item px-1"><amp-img src="../assets/icon/check-circle.svg" alt="check" width="18" height="18" layout="fixed"></amp-img>&nbsp;Logical decision making</li>
+                              <li class="list-group-item px-1"><amp-img src="../assets/icon/check-circle.svg" alt="check" width="18" height="18" layout="fixed"></amp-img>&nbsp;Finding the best move</li>
+                              <li class="list-group-item px-1"><amp-img src="../assets/icon/check-circle.svg" alt="check" width="18" height="18" layout="fixed"></amp-img>&nbsp;Delivering checkmates</li>
                             </ul>
                           </div>
                       </section>
                        <section>
-                        <h4>Requirements? <amp-img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15" height="15" layout="fixed"></amp-img></h4>
+                        <h4>Requirements? <amp-img src="../assets/icon/chevron-down-solid.svg" alt="down icon" width="15" height="15" layout="fixed"></amp-img></h4>
                         <p class="card-body p-2">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id, vestibulum aliqua vivamus luctus eu rhoncus ut, sodales id. Velit lacus, fermentum neque et sagittis, ac venenatis volutpat, dolore neque feugiat proin fermentum odio,
                           odio arcu in eu wisi. </p>
                       </section>
                          <section>
-                        <h4>Why Subscription? <amp-img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15" height="15" layout="fixed"></amp-img></h4>
+                        <h4>Why Subscription? <amp-img src="../assets/icon/chevron-down-solid.svg" alt="down icon" width="15" height="15" layout="fixed"></amp-img></h4>
                         <p class="card-body p-2">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id, vestibulum aliqua vivamus luctus eu rhoncus ut, sodales id. Velit lacus, fermentum neque et sagittis, ac venenatis volutpat, dolore neque feugiat proin fermentum odio,
                           odio arcu in eu wisi. </p>
                       </section>
                          <section>
-                        <h4>What kind of teachers you have? <amp-img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15" height="15" layout="fixed"></amp-img></h4>
+                        <h4>What kind of teachers you have? <amp-img src="../assets/icon/chevron-down-solid.svg" alt="down icon" width="15" height="15" layout="fixed"></amp-img></h4>
                         <p class="card-body p-2">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id, vestibulum aliqua vivamus luctus eu rhoncus ut, sodales id. Velit lacus, fermentum neque et sagittis, ac venenatis volutpat, dolore neque feugiat proin fermentum odio,
                           odio arcu in eu wisi. </p>
                       </section>
                          <section>
-                        <h4>Why Online, will it work for me? <amp-img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15" height="15" layout="fixed"></amp-img></h4>
+                        <h4>Why Online, will it work for me? <amp-img src="../assets/icon/chevron-down-solid.svg" alt="down icon" width="15" height="15" layout="fixed"></amp-img></h4>
                         <p class="card-body p-2">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id, vestibulum aliqua vivamus luctus eu rhoncus ut, sodales id. Velit lacus, fermentum neque et sagittis, ac venenatis volutpat, dolore neque feugiat proin fermentum odio,
                           odio arcu in eu wisi. </p>
                       </section>
                          <section>
-                        <h4>How does an online class work? <amp-img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15" height="15" layout="fixed"></amp-img></h4>
+                        <h4>How does an online class work? <amp-img src="../assets/icon/chevron-down-solid.svg" alt="down icon" width="15" height="15" layout="fixed"></amp-img></h4>
                         <p class="card-body p-2">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id, vestibulum aliqua vivamus luctus eu rhoncus ut, sodales id. Velit lacus, fermentum neque et sagittis, ac venenatis volutpat, dolore neque feugiat proin fermentum odio,
                           odio arcu in eu wisi. </p>
                       </section>
                          <section>
-                        <h4>Do you offer Free Trial <amp-img src="assets/icon/chevron-down-solid.svg" alt="down icon" width="15" height="15" layout="fixed"></amp-img></h4>
+                        <h4>Do you offer Free Trial <amp-img src="../assets/icon/chevron-down-solid.svg" alt="down icon" width="15" height="15" layout="fixed"></amp-img></h4>
                         <p class="card-body p-2">Id lacus amet. Aliquam eos nunc ut scelerisque lacinia, eu rutrum id, vestibulum aliqua vivamus luctus eu rhoncus ut, sodales id. Velit lacus, fermentum neque et sagittis, ac venenatis volutpat, dolore neque feugiat proin fermentum odio,
                           odio arcu in eu wisi. </p>
                       </section>
@@ -708,7 +862,7 @@ footer {
                       <div class="card-body">
                         <div class="d-flex justify-content-center">
                             <div class="teacher-profile w-100 mr-3">
-                                <amp-img src="assets/img/ashish-chess-teacher-xs.jpg" class="img-fluid" alt="Jatin-Thakkar-Teacher" width="90" height="90" layout="fixed"></amp-img>
+                                <amp-img src="../assets/img/ashish-chess-teacher-xs.jpg" class="img-fluid" alt="Jatin-Thakkar-Teacher" width="90" height="90" layout="fixed"></amp-img>
                             </div>
                             <div class="teacher-info">
                                 <h5 class="card-title mb-1 font-weight-bold">Ashish Kumar</h5>
@@ -731,7 +885,7 @@ footer {
                       <div class="card-body">
                         <div class="d-flex justify-content-center">
                         <div class="teacher-profile w-100 mr-3">
-                            <amp-img src="assets/img/Jatin-Thakkar-Teacher-xs.jpg" class="img-fluid" alt="Jatin-Thakkar-Teacher" width="90" height="90" layout="fixed"></amp-img>
+                            <amp-img src="../assets/img/Jatin-Thakkar-Teacher-xs.jpg" class="img-fluid" alt="Jatin-Thakkar-Teacher" width="90" height="90" layout="fixed"></amp-img>
                         </div>
                         <div class="teacher-info">
                         <h5 class="card-title mb-1 font-weight-bold">Jatin Thakkar</h5>
@@ -793,10 +947,10 @@ footer {
                                     </div>
                                     <div class="flex-fill text-right align-self-center">
                                       <p class="per-m m-0">per month</p> 
-                                      <p class="per-rupees h4 font-weight-bold m-0"><span><amp-img src="assets/icon/rupees-dark.svg" alt="rupees" width="15" height="15" layout="fixed"></amp-img></span> 6,000</p>
+                                      <p class="per-rupees h4 font-weight-bold m-0"><span><amp-img src="../assets/icon/rupees-dark.svg" alt="rupees" width="15" height="15" layout="fixed"></amp-img></span> 6,000</p>
                                     </div>
                                     <div class="flex-fill align-self-center text-right"> 
-                                      <p class="course-price h4 font-weight-bold m-0"><span><amp-img src="assets/icon/rupees-dark.svg" alt="rupees" width="15" height="15" layout="fixed"></amp-img></span> 6,000</p>
+                                      <p class="course-price h4 font-weight-bold m-0"><span><amp-img src="../assets/icon/rupees-dark.svg" alt="rupees" width="15" height="15" layout="fixed"></amp-img></span> 6,000</p>
                                       <p class="all-tx m-0">Total(Incl. of all taxes)</p>
                                     </div>
                                   </div>
@@ -813,10 +967,10 @@ footer {
                                     </div>
                                    <div class="flex-fill align-self-center text-right">
                                       <p class="per-m m-0">per month</p> 
-                                      <p class="per-rupees h4 font-weight-bold m-0"><span><amp-img src="assets/icon/rupees-dark.svg" alt="rupees" width="15" height="15" layout="fixed"></amp-img></span> 6,000</p>
+                                      <p class="per-rupees h4 font-weight-bold m-0"><span><amp-img src="../assets/icon/rupees-dark.svg" alt="rupees" width="15" height="15" layout="fixed"></amp-img></span> 6,000</p>
                                     </div>
                                     <div class="flex-fill align-self-center text-right"> 
-                                      <p class="course-price h4 font-weight-bold m-0"><span><amp-img src="assets/icon/rupees-dark.svg" alt="rupees" width="15" height="15" layout="fixed"></amp-img></span> 6,000</p>
+                                      <p class="course-price h4 font-weight-bold m-0"><span><amp-img src="../assets/icon/rupees-dark.svg" alt="rupees" width="15" height="15" layout="fixed"></amp-img></span> 6,000</p>
                                       <p class="all-tx m-0">Total(Incl. of all taxes)</p>
                                     </div>
                                   </div>
@@ -833,10 +987,10 @@ footer {
                                     </div>
                                     <div class="flex-fill align-self-center text-right">
                                       <p class="per-m m-0">per month</p> 
-                                      <p class="per-rupees h4 font-weight-bold m-0"><span><amp-img src="assets/icon/rupees-dark.svg" alt="rupees" width="15" height="15" layout="fixed"></amp-img></span> 6,000</p>
+                                      <p class="per-rupees h4 font-weight-bold m-0"><span><amp-img src="../assets/icon/rupees-dark.svg" alt="rupees" width="15" height="15" layout="fixed"></amp-img></span> 6,000</p>
                                     </div>
                                     <div class="flex-fill align-self-center text-right"> 
-                                      <p class="course-price h4 font-weight-bold m-0"><span><amp-img src="assets/icon/rupees-dark.svg" alt="rupees" width="15" height="15" layout="fixed"></amp-img></span> 6,000</p>
+                                      <p class="course-price h4 font-weight-bold m-0"><span><amp-img src="../assets/icon/rupees-dark.svg" alt="rupees" width="15" height="15" layout="fixed"></amp-img></span> 6,000</p>
                                       <p class="all-tx m-0">Total(Incl. of all taxes)</p>
                                     </div>
                                   </div>
@@ -852,17 +1006,17 @@ footer {
                 <div id="bottom-review">
                    <p class="h2 font-weight-bold mb-2">12 reviews</p>
                     <div class="review-star-bottom mb-3">
-                     <amp-img src="assets/icon/star-solid.svg" alt="full-star" width="30" height="30" layout="fixed"></amp-img>
-                     <amp-img src="assets/icon/star-solid.svg" alt="full-star" width="30" height="30" layout="fixed"></amp-img>
-                     <amp-img src="assets/icon/star-solid.svg" alt="full-star" width="30" height="30" layout="fixed"></amp-img>
-                     <amp-img src="assets/icon/star-solid.svg" alt="full-star" width="30" height="30" layout="fixed"></amp-img>
-                     <amp-img src="assets/icon/star-half-alt-solid.svg" alt="half-star" width="30" height="30" layout="fixed"></amp-img>
+                     <amp-img src="../assets/icon/star-solid.svg" alt="full-star" width="30" height="30" layout="fixed"></amp-img>
+                     <amp-img src="../assets/icon/star-solid.svg" alt="full-star" width="30" height="30" layout="fixed"></amp-img>
+                     <amp-img src="../assets/icon/star-solid.svg" alt="full-star" width="30" height="30" layout="fixed"></amp-img>
+                     <amp-img src="../assets/icon/star-solid.svg" alt="full-star" width="30" height="30" layout="fixed"></amp-img>
+                     <amp-img src="../assets/icon/star-half-alt-solid.svg" alt="half-star" width="30" height="30" layout="fixed"></amp-img>
                     </div>
                     <div class="row row-cols-1">
                       <div class="col mb-1 border-bottom border-top">
                         <div class="card h-100 border-0">
                           <div class="card-body px-2 py-3">
-                            <p class="mb-2"><amp-img src="assets/icon/happy-emoji.svg" alt="happy emoji" width="25" height="25" layout="fixed" class="mr-2" ></amp-img><span class="font-weight-bold">Sylvia G.</span> on Jun 4</p>
+                            <p class="mb-2"><amp-img src="../assets/icon/happy-emoji.svg" alt="happy emoji" width="25" height="25" layout="fixed" class="mr-2" ></amp-img><span class="font-weight-bold">Sylvia G.</span> on Jun 4</p>
                             <p class="card-text">My son liked it, it was great! </p>
                           </div>
                         </div>
@@ -870,7 +1024,7 @@ footer {
                       <div class="col mb-1 border-bottom">
                         <div class="card h-100 border-0">
                           <div class="card-body px-2 py-3">
-                            <p class="mb-2"><amp-img src="assets/icon/happy-emoji.svg" alt="happy emoji" width="25" height="25" layout="fixed" class="mr-2"></amp-img><span class="font-weight-bold">Sylvia G.</span> on Jun 4</p>
+                            <p class="mb-2"><amp-img src="../assets/icon/happy-emoji.svg" alt="happy emoji" width="25" height="25" layout="fixed" class="mr-2"></amp-img><span class="font-weight-bold">Sylvia G.</span> on Jun 4</p>
                             <p class="card-text">My son liked it, it was great! </p>
                           </div>
                         </div>
@@ -878,7 +1032,7 @@ footer {
                         <div class="col mb-1 border-bottom">
                         <div class="card h-100 border-0">
                           <div class="card-body px-2 py-3">
-                            <p class="mb-2"><amp-img src="assets/icon/happy-emoji.svg" alt="happy emoji" width="25" height="25" layout="fixed" class="mr-2"></amp-img><span class="font-weight-bold">Sylvia G.</span> on Jun 4</p>
+                            <p class="mb-2"><amp-img src="../assets/icon/happy-emoji.svg" alt="happy emoji" width="25" height="25" layout="fixed" class="mr-2"></amp-img><span class="font-weight-bold">Sylvia G.</span> on Jun 4</p>
                             <p class="card-text">My son liked it, it was great! </p>
                           </div>
                         </div>
@@ -886,7 +1040,7 @@ footer {
                          <div class="col mb-1 border-bottom">
                         <div class="card h-100 border-0">
                           <div class="card-body px-2 py-3">
-                            <p class="mb-2"><amp-img src="assets/icon/happy-emoji.svg" alt="happy emoji" width="25" height="25" layout="fixed" class="mr-2"></amp-img><span class="font-weight-bold">Sylvia G.</span> on Jun 4</p>
+                            <p class="mb-2"><amp-img src="../assets/icon/happy-emoji.svg" alt="happy emoji" width="25" height="25" layout="fixed" class="mr-2"></amp-img><span class="font-weight-bold">Sylvia G.</span> on Jun 4</p>
                             <p class="card-text">My son liked it, it was great! </p>
                           </div>
                         </div>
@@ -908,10 +1062,11 @@ footer {
   <!-- FOOTER -->
   <footer class="py-4">
     <div class="container text-center">
-        <p class="float-right text-white m-0"><a href="#" class="text-white">Back to top</a></p>
         <p class="text-white m-0">&copy; Copyright 2020 Footprints Childcare Pvt Ltd</p>
     </div>
   </footer>
+
+<button id="scrollToTopButton" on="tap:top.scrollTo(duration=200)" class="scrollToTop">⌃</button>    
 </main>
 </body>
 </html>
