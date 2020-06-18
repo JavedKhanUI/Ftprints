@@ -2,7 +2,7 @@
 <html ⚡ i-amphtml-layout i-amphtml-no-boilerplate transformed="google;v=1">
 <head>
 <meta charset="utf-8">
-<title>Online Footprints</title>
+<title>Online Live classes by Footprints Bringing learning to your home</title>
 
 <!--Theme Color-->
 <meta name="msapplication-TileColor" content="#ffffff">
@@ -25,6 +25,14 @@
 <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
 <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
 <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+<!--  Import amp-position-observer extension -->
+<script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+
+<!--  Import amp-animation extension -->
+<script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+    
+<script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async=""></script>
+
 
     
 <!-- Favicon-->
@@ -34,7 +42,7 @@
 <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com/css2?family=Montserrat:wght@400;500;700;800&family=Quicksand:wght@400;500;700&display=swap" crossorigin>
     
 <!--Canonical-->
-<link rel="canonical" href="#">
+<link rel="canonical" href="./index.html">
     
 <script type="application/ld+json">
       {
@@ -311,11 +319,32 @@ body{min-width:992px;}
 .container{min-width:992px;}
 .navbar{display:none;}
 }
-
+.dropdown{position:relative;}
+.dropdown-toggle{white-space:nowrap;}
+.dropdown-toggle::after{display:inline-block;margin-left:0.255em;vertical-align:0.255em;content:"";border-top:0.3em solid;border-right:0.3em solid transparent;border-bottom:0;border-left:0.3em solid transparent;}
+.dropdown-toggle:empty::after{margin-left:0;}
+.dropdown-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:10rem;padding:0.5rem 0;margin:0.125rem 0 0;font-size:1rem;color:#212529;text-align:left;list-style:none;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0, 0, 0, 0.15);border-radius:0.25rem;}
+.dropdown-item{display:block;width:100%;padding:0.25rem 1.5rem;clear:both;font-weight:400;color:#212529;text-align:inherit;white-space:nowrap;background-color:transparent;border:0;}
+.dropdown-item:hover,.dropdown-item:focus{color:#16181b;text-decoration:none;background-color:#f8f9fa;}
+.dropdown-item:active{color:#fff;text-decoration:none;background-color:#007bff;}
+.dropdown-item:disabled{color:#6c757d;pointer-events:none;background-color:transparent;}
+.nav-link{display:block;padding:0.5rem 1rem;}
+.nav-link:hover,.nav-link:focus{text-decoration:none;}
+.navbar-nav .nav-link{padding-right:0;padding-left:0;}
+.navbar-nav .dropdown-menu{position:static;float:none;}
+@media (min-width: 768px){
+.navbar-expand-md .navbar-nav .dropdown-menu{position:absolute;}
+.navbar-expand-md .navbar-nav .nav-link{padding-right:0.5rem;padding-left:0.5rem;}
+}
+.navbar-light .navbar-nav .nav-link{color:rgba(0, 0, 0, 0.5);}
+.navbar-light .navbar-nav .nav-link:hover,.navbar-light .navbar-nav .nav-link:focus{color:rgba(0, 0, 0, 0.7);}
+    
+.nav-item.dropdown:hover .dropdown-menu { display: block;}
 /*! CSS Used Custom */
 header.masthead{padding-top:10rem;padding-bottom:calc(10rem - 4.5rem);background:linear-gradient(to bottom, rgba(0, 0, 0, 0.39) 0%, rgba(0, 0, 0, 0.38) 100%),url(../assets/img/Online-Live-Classes-Background.jpg);background-position:center;background-repeat:no-repeat;background-attachment:scroll;background-size:cover;}
 .classes-categories .card{height:40vh;}
 .all-btn-search{background:#FBA505;border:#FBA505;font-weight:600;}
+.scrollToTop { color: #fff; font-size: 1.8em; box-shadow: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12); width: 50px; height: 50px; border-radius: 15%; border: none; outline: none; background: #fca509; z-index: 9999; bottom: 10px; right: 25px; position: fixed; opacity: 0; visibility: hidden; }
 @media (min-width: 992px){
 header.masthead{height:50vh;min-height:35rem;padding-top:4.5rem;padding-bottom:0;}
 .masthead h1{font-size:4em;}
@@ -330,6 +359,8 @@ header.masthead{height:50vh;min-height:35rem;padding-top:4.5rem;padding-bottom:0
 @media only screen and (min-width:320px) and (max-width:767px){
 .classes-categories .card{height:70vh;}
 header.masthead{padding-top:5rem;}
+.scrollToTop { bottom: 90px;}
+    
 }
 /*! CSS Used Custom */
 body{padding-top:3rem;color:#5a5a5a;}
@@ -347,9 +378,7 @@ a{text-decoration:none;}
 .btn-success{color:#fff;background-color:#04BF74;border-color:#04BF74;}
 .btn-success:hover,.btn-success:focus{background-color:#04BF74;border-color:#04BF74;}
 footer{background:#444444;}
-#accordionCourse .card-header {
-    border-bottom: 2px solid #dfdfdf;
-}
+#accordionCourse .card-header { border-bottom: 2px solid #dfdfdf;}
 .all-course h4 {
     background: #fff;
     border: 0;
@@ -377,14 +406,45 @@ amp-lightbox { z-index: 9999;}
     justify-content: center;
 }
     
+#header-sidebar .closeslide {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+#header-sidebar nav ul { list-style: none; padding: 0; margin-top: 30px; }
+    
+#header-sidebar nav ul li {
+    padding: 10px 30px;
+    color: #565656;
+    background: #fff;
+}
+#header-sidebar nav ul li a { color: #444; font-weight: 500;}
+    
+#header-sidebar .ampstart-sidebar-nav header {
+    background: #fff;
+    border: 0;
+    font-weight: 600;
+    padding: 0;
+}
+#header-sidebar .ampstart-sidebar-nav .ampstart-dropdown-items {
+    margin-top: 0;
+}
+#header-sidebar .ampstart-sidebar-nav .ampstart-dropdown-items li {
+    padding: 0;
+}
+#header-sidebar .ampstart-sidebar-nav .ampstart-dropdown-items li a {
+    padding: 8px 30px 8px 13px;
+    color: #444;
+}
+    
+
 @media (max-width: 575.98px){
 .learning h3{font-size:1.8em;}
 .course-card{min-width:280px;}
 }
 @media (min-width: 576px){
 .course-card{min-width:290px;}
-}
-    
+}  
 </style>
     
 <link rel="preload" as="image" href="../assets/img/Online-Live-Classes-Background-sm" media="(max-width: 415px)">
@@ -392,20 +452,119 @@ amp-lightbox { z-index: 9999;}
     
 </head>
 <body>
+
+<div class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start" layout="nodisplay">
+    </amp-position-observer>
+</div>
+
+ <!--
+    We use 2 `amp-animation` elements to trigger the visibility of the button. The first one is for making the button visible...
+  -->
+  <amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+  <!-- ... and the second one is for adding the button.-->
+  <amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>    
+
 <header>
   <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white py-4 shadow">
     <div class="container"> <a class="navbar-brand" href="#"><amp-img src="../assets/img/Footprints-Logo.svg" alt="Footprints Logo" width="200" height="25" layout="fixed"></amp-img></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#">Online Classes</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#">Policies</a></li>
-        </ul>
-      </div>
+      <button class="navbar-toggler ampstart-navbar-trigger" role="button" aria-label="open sidebar" on="tap:header-sidebar.toggle" tabindex="0">☰</button>
+        
+       <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
+               <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Online Classes
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="chess-categories.html">Chess</a>
+                      <a class="dropdown-item" href="#">Coding</a>
+                      <a class="dropdown-item" href="#">Creative Arts</a>
+                      <a class="dropdown-item" href="#">Dance</a>
+                      <a class="dropdown-item" href="#">French</a>
+                      <a class="dropdown-item" href="#">Maths</a>
+                      <a class="dropdown-item" href="#">Music</a>
+                      <a class="dropdown-item" href="#">Theatre</a>
+                      <a class="dropdown-item" href="#">Yoga</a>
+                    </div>
+                  </li>
+              <li class="nav-item"> <a class="nav-link" href="#">Policies</a></li>
+            </ul>
+          </div>
     </div>
   </nav>
 </header>
+    
+
+<!-- Start Sidebar -->
+<amp-sidebar id="header-sidebar" class="ampstart-sidebar bg-white" layout="nodisplay">
+  <div class="flex justify-start items-center ampstart-sidebar-header closeslide">
+    <div role="button" aria-label="close sidebar" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger items-start">✕</div>
+  </div>
+  <nav class="ampstart-sidebar-nav ampstart-nav">
+    <ul class="list-reset m0 p0 ampstart-label">
+          <li class="ampstart-nav-item"><a class="ampstart-nav-link" href="#">Home</a></li>
+          <li class="ampstart-nav-item ampstart-nav-dropdown relative ">
+            <!-- Start Dropdown-inline -->
+            <amp-accordion layout="container" disable-session-states="" class="ampstart-dropdown">
+              <section expanded="">
+                <header>Online Classes</header>
+                <ul class="ampstart-dropdown-items">
+                    <li class="nav-item"><a href="#" class="nav-link">Chess</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Coding</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Creative Arts</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">French</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Maths</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Music</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Theatre</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Yoga</a></li>
+                </ul>
+              </section>
+            </amp-accordion>
+            <!-- End Dropdown-inline -->
+          </li>
+          <li class="ampstart-nav-item"><a class="ampstart-nav-link" href="#">Policies</a></li>
+     </ul>
+  </nav>
+</amp-sidebar>
+<!-- End Sidebar -->
+    
 <main role="main">
 
 <!-- Masthead-->
@@ -1271,10 +1430,12 @@ amp-lightbox { z-index: 9999;}
   <!-- FOOTER -->
   <footer class="py-4">
     <div class="container text-center">
-        <p class="float-right text-white m-0"><a href="#" class="text-white">Back to top</a></p>
         <p class="text-white m-0">&copy; Copyright 2020 Footprints Childcare Pvt Ltd</p>
     </div>
   </footer>
+    
+<button id="scrollToTopButton" on="tap:top.scrollTo(duration=200)" class="scrollToTop">⌃</button>
+    
 </main>
 </body>
 </html>
