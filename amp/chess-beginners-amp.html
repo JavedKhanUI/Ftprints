@@ -29,9 +29,7 @@
 <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
     
 <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async=""></script>
-    
-<script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
-    
+        
 <!-- Favicon-->
 <link href="../assets/favicon/favicon.ico" rel="icon" type="image/x-icon" />
     
@@ -326,6 +324,10 @@ body{min-width:992px;}
 .navbar-light .navbar-nav .nav-link:hover,.navbar-light .navbar-nav .nav-link:focus{color:rgba(0, 0, 0, 0.7);}
     
 .nav-item.dropdown:hover .dropdown-menu { display: block;}
+
+.per-rupees amp-img, .course-price amp-img {
+    vertical-align: middle;
+}
     
 /*Custom Style*/
     
@@ -418,9 +420,12 @@ p.course-review-top a {
     color: #007bff;
     text-decoration: underline;
 }
+/*Subscription Single*/
 .subscription .card-header {
+    padding: 0;
     background: #FBA505;
     border-radius: 11px 11px 0 0;
+    padding: 0.75rem 1.25rem;
 }
 
 .subscription .card-header h4 {
@@ -517,9 +522,15 @@ footer {
     padding: 8px 30px 8px 13px;
     color: #444;
 }
-@media only screen and (min-width:320px) and (max-width:767px){
-.scrollToTop { bottom: 90px;}   
-}   
+ 
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    .back-to-top {bottom: 95px;}
+    .subscription-list .course-price span amp-img {width: 9px;}
+    .subscription-list .per-rupees span amp-img {width: 7px;}
+    .subscription-list .course-price {font-size: 1em;}
+    .subscription-list .per-rupees {font-size: .7em;} 
+}
 
 </style>
     
@@ -931,110 +942,80 @@ footer {
                         </ul>
                     </div>
                 </div>
-                <div class="sus-options my-4" id="exTab3">
-                    <amp-selector class="tabs-with-selector"
-                      role="tablist"
-                      on="select:myTabPanels.toggle(index=event.targetOption, value=true)"
-                      keyboard-select-mode="focus">
-                      <div id="sample3-tab1"
-                        role="tab"
-                        aria-controls="sample3-tabpanel1"
-                        option="0"
-                        selected>Tab one</div>
-                      <div id="sample3-tab2"
-                        role="tab"
-                        aria-controls="sample3-tabpanel2"
-                        option="1">Tab two</div>
-                    </amp-selector>
-
-                    <amp-selector id="myTabPanels"
-                      class="tabpanels">
-                      <div id="sample3-tabpanel1"
-                        role="tabpanel"
-                        aria-labelledby="sample3-tab1"
-                        option
-                        selected>
-                            <div class="subscription my-4">
-                                <div class="card border-0 shadow">
-                                    <div class="card-header text-center">
-                                        <h4 class="h2 m-0 text-white">Subscription Options</h4>
-                                    </div>
-                                    <div class="card-body px-2 pb-1">
-                                        <div class="row row-cols-1">
-                                          <div class="col mb-2">
-                                            <div class="card h-100 subscription-list">
-                                              <div class="card-body d-flex justify-content-center py-3">
-                                                <div class="flex-fill align-self-center">
-                                                    <div class="custom-control custom-radio">
-                                                      <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                                                      <label class="custom-control-label font-weight-bold" for="customRadio1">Monthly</label>
-                                                    </div>
+                <div class="subscription py-4 px-2">
+                            <div class="card border-0 shadow">
+                                <div class="card-header text-center text-white">
+                                    <h4 class="h2 m-0">Subscription Options</h4>
+                                </div>
+                                <div class="card-body px-2 pb-1">
+                                    <div class="row row-cols-1">
+                                      <div class="col mb-2">
+                                        <div class="card h-100 subscription-list">
+                                          <div class="card-body d-flex justify-content-center py-3">
+                                            <div class="flex-fill align-self-center">
+                                                <div class="custom-control custom-radio">
+                                                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                                  <label class="custom-control-label font-weight-bold" for="customRadio1">Monthly</label>
                                                 </div>
-                                                <div class="flex-fill text-right align-self-center">
-                                                  <p class="per-m m-0">per month</p> 
-                                                  <p class="per-rupees h4 font-weight-bold m-0"><span><amp-img src="../assets/icon/rupees-dark.svg" alt="rupees" width="15" height="15" layout="fixed"></amp-img></span> 6,000</p>
-                                                </div>
-                                                <div class="flex-fill align-self-center text-right"> 
-                                                  <p class="course-price h4 font-weight-bold m-0"><span><amp-img src="../assets/icon/rupees-dark.svg" alt="rupees" width="15" height="15" layout="fixed"></amp-img></span> 6,000</p>
-                                                  <p class="all-tx m-0">Total(Incl. of all taxes)</p>
-                                                </div>
-                                              </div>
                                             </div>
-                                          </div>
-                                          <div class="col mb-2">
-                                            <div class="card h-100 subscription-list active">
-                                              <div class="card-body d-flex justify-content-center py-3">
-                                                <div class="flex-fill align-self-center">
-                                                    <div class="custom-control custom-radio">
-                                                      <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" checked>
-                                                      <label class="custom-control-label font-weight-bold" for="customRadio2">Qtrly</label>
-                                                    </div>
-                                                </div>
-                                               <div class="flex-fill align-self-center text-right">
-                                                  <p class="per-m m-0">per month</p> 
-                                                  <p class="per-rupees h4 font-weight-bold m-0"><span><amp-img src="../assets/icon/rupees-dark.svg" alt="rupees" width="15" height="15" layout="fixed"></amp-img></span> 6,000</p>
-                                                </div>
-                                                <div class="flex-fill align-self-center text-right"> 
-                                                  <p class="course-price h4 font-weight-bold m-0"><span><amp-img src="../assets/icon/rupees-dark.svg" alt="rupees" width="15" height="15" layout="fixed"></amp-img></span> 6,000</p>
-                                                  <p class="all-tx m-0">Total(Incl. of all taxes)</p>
-                                                </div>
-                                              </div>
+                                            <div class="flex-fill text-right align-self-center">
+                                              <p class="per-m m-0">per month</p> 
+                                              <p class="per-rupees h4 font-weight-bold m-0"><span><amp-img src="../assets/icon/rupees-dark.svg" alt="rupees" width="15" height="15" layout="fixed"></amp-img></span> 3,000</p>
                                             </div>
-                                          </div>
-                                          <div class="col mb-2">
-                                            <div class="card h-100 subscription-list">
-                                              <div class="card-body d-flex justify-content-center py-3">
-                                                <div class="flex-fill align-self-center">
-                                                    <div class="custom-control custom-radio">
-                                                      <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
-                                                      <label class="custom-control-label font-weight-bold" for="customRadio3">Half Yearly</label>
-                                                    </div>
-                                                </div>
-                                                <div class="flex-fill align-self-center text-right">
-                                                  <p class="per-m m-0">per month</p> 
-                                                  <p class="per-rupees h4 font-weight-bold m-0"><span><amp-img src="../assets/icon/rupees-dark.svg" alt="rupees" width="15" height="15" layout="fixed"></amp-img></span> 6,000</p>
-                                                </div>
-                                                <div class="flex-fill align-self-center text-right"> 
-                                                  <p class="course-price h4 font-weight-bold m-0"><span><amp-img src="../assets/icon/rupees-dark.svg" alt="rupees" width="15" height="15" layout="fixed"></amp-img></span> 6,000</p>
-                                                  <p class="all-tx m-0">Total(Incl. of all taxes)</p>
-                                                </div>
-                                              </div>
+                                            <div class="flex-fill align-self-center text-right"> 
+                                              <p class="course-price h4 font-weight-bold m-0"><span><amp-img src="../assets/icon/rupees-dark.svg" alt="rupees" width="15" height="15" layout="fixed"></amp-img></span> 3,000</p>
+                                              <p class="all-tx m-0">Total(Incl. of all taxes)</p>
                                             </div>
                                           </div>
                                         </div>
-                                    </div>
-                                    <div class="card-footer p-2">
-                                       <button class="btn btn-primary btn-block py-2 sub-sign" type="submit">Sign Up Now</button>
+                                      </div>
+                                      <div class="col mb-2">
+                                        <div class="card h-100 subscription-list active">
+                                          <div class="card-body d-flex justify-content-center py-3">
+                                            <div class="flex-fill align-self-center">
+                                                <div class="custom-control custom-radio">
+                                                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" checked>
+                                                  <label class="custom-control-label font-weight-bold" for="customRadio2">Qtrly</label>
+                                                </div>
+                                            </div>
+                                           <div class="flex-fill align-self-center text-right">
+                                              <p class="per-m m-0">per month</p> 
+                                              <p class="per-rupees h4 font-weight-bold m-0"><span><amp-img src="../assets/icon/rupees-dark.svg" alt="rupees" width="15" height="15" layout="fixed"></amp-img></span> 9,000</p>
+                                            </div>
+                                            <div class="flex-fill align-self-center text-right"> 
+                                              <p class="course-price h4 font-weight-bold m-0"><span><amp-img src="../assets/icon/rupees-dark.svg" alt="rupees" width="15" height="15" layout="fixed"></amp-img></span> 9,000</p>
+                                              <p class="all-tx m-0">Total(Incl. of all taxes)</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col mb-2">
+                                        <div class="card h-100 subscription-list">
+                                          <div class="card-body d-flex justify-content-center py-3">
+                                            <div class="flex-fill align-self-center">
+                                                <div class="custom-control custom-radio">
+                                                  <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                                                  <label class="custom-control-label font-weight-bold" for="customRadio3">Half Yearly</label>
+                                                </div>
+                                            </div>
+                                            <div class="flex-fill align-self-center text-right">
+                                              <p class="per-m m-0">per month</p> 
+                                              <p class="per-rupees h4 font-weight-bold m-0"><span><amp-img src="../assets/icon/rupees-dark.svg" alt="rupees" width="15" height="15" layout="fixed"></amp-img></span> 27,000</p>
+                                            </div>
+                                            <div class="flex-fill align-self-center text-right"> 
+                                              <p class="course-price h4 font-weight-bold m-0"><span><amp-img src="../assets/icon/rupees-dark.svg" alt="rupees" width="15" height="15" layout="fixed"></amp-img></span>27,000</p>
+                                              <p class="all-tx m-0">Total(Incl. of all taxes)</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
                                     </div>
                                 </div>
+                                <div class="card-footer p-2 border-0 bg-white">
+                                   <button class="btn btn-primary btn-block py-2 sub-sign" type="submit">Sign Up Now</button>
+                                </div>
                             </div>
-                        </div>
-                      <div id="sample3-tabpanel2"
-                        role="tabpanel"
-                        aria-labelledby="sample3-tab2"
-                        option>Tab two content... </div>
-                    </amp-selector>
-                </div>
+                           </div>  
                 <div id="bottom-review">
                    <p class="h2 font-weight-bold mb-2">12 reviews</p>
                     <div class="review-star-bottom mb-3">
