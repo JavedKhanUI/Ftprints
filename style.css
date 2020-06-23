@@ -256,6 +256,23 @@ footer {background: #444444;}
     z-index: 9999;
 }
 
+#exTab3 .nav-tabs .nav-link.active, 
+#exTab3 .nav-tabs .nav-item.show .nav-link {
+    background: #FBA505;
+    color: #fff;
+    border: 0;
+    font-weight: 700;
+}
+#exTab3 .tab-content .tab-pane.active {
+    background: #ffffff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+#exTab3 .nav-tabs .nav-link {
+    color: #777;
+    font-weight: 600;
+    background: #f7f7f7;
+}
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
@@ -285,6 +302,10 @@ footer {background: #444444;}
     .course-card { min-width: 280px;}
     .teacherFullProfile {background-position-y: -38em;}
     .back-to-top {bottom: 95px;}
+    .subscription-list .course-price span img {width: 9px;}
+    .subscription-list .per-rupees span img {width: 7px;}
+    .subscription-list .course-price {font-size: 1em;}
+    .subscription-list .per-rupees {font-size: .7em;}
 }
 
 /*Small devices (landscape phones, less than 768px)*/
